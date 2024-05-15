@@ -181,7 +181,7 @@ const ProfilePage = () => {
                           textTransform: 'capitalize'
                         }}
                         icon={<Profile size={18} style={{ marginBottom: 0, marginRight: '10px' }} />}
-                        label="Profile"
+                        label="Perfil"
                         {...a11yProps(0)}
                       />
                       <Tab
@@ -193,7 +193,7 @@ const ProfilePage = () => {
                           textTransform: 'capitalize'
                         }}
                         icon={<Setting2 size={18} style={{ marginBottom: 0, marginRight: '10px' }} />}
-                        label="Setting"
+                        label="Configurações"
                         {...a11yProps(1)}
                       />
                     </Tabs>

@@ -1,5 +1,5 @@
 // project-imports
-import support from './support';
+import main from './main';
 
 // types
 import { NavItemType } from 'types/menu';
@@ -7,7 +7,7 @@ import { NavItemType } from 'types/menu';
 // ==============================|| MENU ITEMS ||============================== //
 
 const menuItems: { items: NavItemType[] } = {
-  items: [support]
+  items: [main]
 };
 
 export default menuItems;

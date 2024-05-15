@@ -20,19 +20,19 @@ const SettingTab = () => {
         <ListItemIcon>
           <I24Support variant="Bulk" size={18} />
         </ListItemIcon>
-        <ListItemText primary="Support" />
+        <ListItemText primary="Ajuda" />
       </ListItemButton>
       <ListItemButton selected={selectedIndex === 1} onClick={(event: MouseEvent<HTMLDivElement>) => handleListItemClick(event, 1)}>
         <ListItemIcon>
           <Profile variant="Bulk" size={18} />
         </ListItemIcon>
-        <ListItemText primary="Account Settings" />
+        <ListItemText primary="Configurações da Conta" />
       </ListItemButton>
       <ListItemButton selected={selectedIndex === 2} onClick={(event: MouseEvent<HTMLDivElement>) => handleListItemClick(event, 2)}>
         <ListItemIcon>
           <Lock1 variant="Bulk" size={18} />
         </ListItemIcon>
-        <ListItemText primary="Privacy Center" />
+        <ListItemText primary="Privacidade" />
       </ListItemButton>
       <ListItemButton selected={selectedIndex === 3} onClick={(event: MouseEvent<HTMLDivElement>) => handleListItemClick(event, 3)}>
         <ListItemIcon>
@@ -44,7 +44,7 @@ const SettingTab = () => {
         <ListItemIcon>
           <Clipboard variant="Bulk" size={18} />
         </ListItemIcon>
-        <ListItemText primary="History" />
+        <ListItemText primary="Histórico" />
       </ListItemButton>
     </List>
   );

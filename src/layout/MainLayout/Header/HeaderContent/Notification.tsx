@@ -8,10 +8,6 @@ import {
   ClickAwayListener,
   Link,
   List,
-  ListItemButton,
-  ListItemAvatar,
-  ListItemText,
-  ListItemSecondaryAction,
   Paper,
   Popper,
   Stack,
@@ -25,8 +21,7 @@ import IconButton from 'components/@extended/IconButton';
 import Transitions from 'components/@extended/Transitions';
 
 // assets
-import { Gift, MessageText1, Notification, Setting2 } from 'iconsax-react';
-import Avatar from 'components/@extended/Avatar';
+import { Notification } from 'iconsax-react';
 
 // types
 import { ThemeMode } from 'types/config';
@@ -48,7 +43,7 @@ const NotificationPage = () => {
   const matchesXs = useMediaQuery(theme.breakpoints.down('md'));
 
   const anchorRef = useRef<any>(null);
-  const [read] = useState(2);
+  const [read] = useState(0);
   const [open, setOpen] = useState(false);
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -116,9 +111,9 @@ const NotificationPage = () => {
               <ClickAwayListener onClickAway={handleClose}>
                 <MainCard elevation={0} border={false}>
                   <Stack direction="row" alignItems="center" justifyContent="space-between">
-                    <Typography variant="h5">Notifications</Typography>
+                    <Typography variant="h5">Notificações</Typography>
                     <Link href="#" variant="h6" color="primary">
-                      Mark all read
+                      Marcar como lido
                     </Link>
                   </Stack>
                   <List
@@ -136,109 +131,18 @@ const NotificationPage = () => {
                       }
                     }}
                   >
-                    <ListItemButton>
-                      <ListItemAvatar>
-                        <Avatar type="filled">
-                          <Gift size={20} variant="Bold" />
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={
-                          <Typography variant="h6">
-                            It&apos;s{' '}
-                            <Typography component="span" variant="subtitle1">
-                              Cristina danny&apos;s
-                            </Typography>{' '}
-                            birthday today.
-                          </Typography>
-                        }
-                        secondary="2 min ago"
-                      />
-                      <ListItemSecondaryAction>
-                        <Typography variant="caption" noWrap>
-                          3:00 AM
-                        </Typography>
-                      </ListItemSecondaryAction>
-                    </ListItemButton>
-
-                    <ListItemButton>
-                      <ListItemAvatar>
-                        <Avatar type="outlined">
-                          <MessageText1 size={20} variant="Bold" />
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={
-                          <Typography variant="h6">
-                            <Typography component="span" variant="subtitle1">
-                              Aida Burg
-                            </Typography>{' '}
-                            commented your post.
-                          </Typography>
-                        }
-                        secondary="5 August"
-                      />
-                      <ListItemSecondaryAction>
-                        <Typography variant="caption" noWrap>
-                          6:00 PM
-                        </Typography>
-                      </ListItemSecondaryAction>
-                    </ListItemButton>
-
-                    <ListItemButton>
-                      <ListItemAvatar>
-                        <Avatar>
-                          <Setting2 size={20} variant="Bold" />
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={
-                          <Typography variant="h6">
-                            Your Profile is Complete &nbsp;
-                            <Typography component="span" variant="subtitle1">
-                              60%
-                            </Typography>{' '}
-                          </Typography>
-                        }
-                        secondary="7 hours ago"
-                      />
-                      <ListItemSecondaryAction>
-                        <Typography variant="caption" noWrap>
-                          2:45 PM
-                        </Typography>
-                      </ListItemSecondaryAction>
-                    </ListItemButton>
-
-                    <ListItemButton>
-                      <ListItemAvatar>
-                        <Avatar type="combined">C</Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={
-                          <Typography variant="h6">
-                            <Typography component="span" variant="subtitle1">
-                              Cristina Danny
-                            </Typography>{' '}
-                            invited to join{' '}
-                            <Typography component="span" variant="subtitle1">
-                              Meeting.
-                            </Typography>
-                          </Typography>
-                        }
-                        secondary="Daily scrum meeting time"
-                      />
-                      <ListItemSecondaryAction>
-                        <Typography variant="caption" noWrap>
-                          9:10 PM
-                        </Typography>
-                      </ListItemSecondaryAction>
-                    </ListItemButton>
                   </List>
-                  <Stack direction="row" justifyContent="center">
-                    <Link href="#" variant="h6" color="primary">
-                      View all
-                    </Link>
-                  </Stack>
+
+                  {
+                    /*
+                     <Stack direction="row" justifyContent="center">
+                        <Link href="#" variant="h6" color="primary">
+                          View all
+                        </Link>
+                      </Stack>
+                    */
+                  }
+                  
                 </MainCard>
               </ClickAwayListener>
             </Paper>
