@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkable_pro_material_react_ts=self.webpackChunkable_pro_material_react_ts||[]).push([[19],{19:function(e,r,a){a.r(r);var t=a(890),n=a(651),s=a(184);r.default=function(){return(0,s.jsx)(n.Z,{title:"Sample Card",children:(0,s.jsx)(t.Z,{variant:"body1",children:"Do you Know? Able is used by more than 2.4K+ Customers worldwide. This new v9 version is the major release of Able Pro Dashboard Template with having brand new modern User Interface."})})}}}]);
-//# sourceMappingURL=19.e8cd1725.chunk.js.map
