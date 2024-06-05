@@ -36,6 +36,8 @@ async function authenticate() {
 
   switch (res.status) {
     case 200: {
+      const body = await res.json();
+      localStorage.setItem("token", body.token);
       location.href = "/application/file-manager.html"
       break;
     }
