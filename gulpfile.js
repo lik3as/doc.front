@@ -1,4 +1,3 @@
-
 var gulp = require("gulp");
 var sass = require('gulp-sass')(require('sass'));
 var del = require('del');
@@ -15,6 +14,10 @@ var cssbeautify = require("gulp-cssbeautify");
 var fileinclude = require("gulp-file-include");
 var browsersync = require("browser-sync");
 var htmlmin = require("gulp-htmlmin");
+const replace = require("gulp-replace")
+const { configDotenv } = require("dotenv");
+
+configDotenv()
 
 // =======================================================
 // -----------   Able Pro Theme Configuration  -----------
@@ -245,8 +248,14 @@ gulp.task("build-js", function () {
     .pipe(gulp.dest("dist/assets/js"));
 
   var pagesjs = gulp
-    .src("src/assets/js/pages/*.js")
-    .pipe(gulp.dest("dist/assets/js/pages"));
+    .src("src/assets/js/pages/**/*.js");
+
+  for (key in process.env) {
+    pagesjs = pagesjs.pipe(replace(new RegExp(`@${key}`), process.env[key]))
+  }
+
+  pagesjs.pipe(gulp.dest("dist/assets/js/pages"));
+
 
   return merge(layoutjs, pagesjs);
 });

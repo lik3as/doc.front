@@ -1,10 +1,6 @@
 import FileCard from "../../components/file-card.js";
 import FileOffcanvas from "../../components/file-offcanvas.js";
 
-let files = null;
-let fileId = 0;
-
-const API_BASE_URL = "http://localhost:3000";
 const token = localStorage.getItem("token");
 
 function updateFileCards(files) {
@@ -28,7 +24,7 @@ function updateFileCards(files) {
 }
 
 async function findCustomer(cpf) {
-  const res = await fetch(`${API_BASE_URL}/customers/find`, {
+  const res = await fetch("@API_URL/customers/find", {
     body: JSON.stringify({
       cpf: cpf,
     }),
@@ -44,7 +40,7 @@ async function findCustomer(cpf) {
 }
 
 async function fetchFiles() {
-  const body = await fetch(`${API_BASE_URL}/files?lim=3&id=${fileId}`, {
+  const body = await fetch("@API_URL/files?lim=3&id=${fileId}", {
     headers: [
       ["Authorization", `Bearer ${token}`]
     ]
