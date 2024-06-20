@@ -1,5 +1,3 @@
-const API_BASE_URL = "http://localhost:3000";
-
 function showNotification(message, isSuccess) {
   const notification = document.getElementById('notification');
   notification.textContent = message;
@@ -18,7 +16,7 @@ async function authenticate() {
   const email = document.querySelector('.form-group input[type="email"]').value;
   const password = document.querySelector('.form-group input[type="password"]').value;
 
-  const res = await fetch(`${API_BASE_URL}/auth/login`, {
+  const res = await fetch("@API_URL/auth/login", {
     body: JSON.stringify({
       user: email,
       password: password,
