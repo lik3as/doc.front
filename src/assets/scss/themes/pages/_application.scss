@@ -1,12 +1,13 @@
 /**  =====================
   25. Application css start
 ==========================  **/
-@import "chat";
-@import "mail";
-@import "file-manager";
-@import "calendar";
-@import "e-commerce";
+@import 'chat';
+@import 'mail';
+@import 'file-manager';
+@import 'calendar';
+@import 'e-commerce';
 // Common Application css start for all apllication pages
+.invoice-tab,
 .profile-tabs {
   border-bottom: 0;
   .nav-item {
@@ -30,7 +31,7 @@
         font-size: 20px;
       }
       &:after {
-        content: "";
+        content: '';
         background: var(--bs-primary);
         position: absolute;
         transition: all 0.3s ease-in-out;
@@ -46,7 +47,7 @@
   .nav-link:hover {
     border-color: transparent;
     background: transparent;
-    color:var(--bs-primary);
+    color: var(--bs-primary);
     .material-icons-two-tone {
       background-color: var(--bs-primary);
     }
@@ -78,6 +79,41 @@
         }
       }
     }
+  }
+}
+// invoice start
+.table-invoice-comp {
+  border-spacing: 0 10px;
+  border-collapse: separate;
+  width: calc(100% - 10px);
+  margin: 0 5px;
+
+  tbody {
+    tr {
+      box-shadow: var(--pc-card-shadow);
+      background: var(--bs-card-bg);
+      border-radius: 4px;
+      position: relative;
+    }
+  }
+}
+
+.invoice-total {
+  width: 100%;
+  max-width: 400px;
+}
+.invoice-tab {
+  .nav-item {
+    .nav-link {
+      padding: 0.9rem 0.8rem;
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+  .avtar {
+    font-size: 13px;
+    width: 22px;
+    height: 22px;
   }
 }
 /**  =====================

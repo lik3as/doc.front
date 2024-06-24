@@ -49,7 +49,7 @@
         }
       }
 
-      +.list-group-item.active {
+      + .list-group-item.active {
         margin-top: 0;
       }
     }
@@ -258,11 +258,11 @@
     font-size: 20px;
 
     &:checked {
-      ~.pc-icon-uncheck {
+      ~ .pc-icon-uncheck {
         display: none;
       }
 
-      ~.pc-icon-check {
+      ~ .pc-icon-check {
         display: inline-block;
       }
     }

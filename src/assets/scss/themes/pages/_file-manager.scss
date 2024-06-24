@@ -2,19 +2,19 @@
   file-manager css start
 ==========================  **/
 .file-manger-wrapper {
-  .card{
-    transition: all .2s ease-in-out;
-    &:hover{
+  .card {
+    transition: all 0.2s ease-in-out;
+    &:hover {
       box-shadow: 0px 8px 24px rgba(27, 46, 94, 0.08);
     }
   }
 }
-.file-card{
+.file-card {
   position: relative;
-  .form-check{
-    .form-check-label{
+  .form-check {
+    .form-check-label {
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -28,39 +28,41 @@
         + .form-check-label {
           &::after {
             background: rgba(var(--bs-primary-rgb), 0.03);
-            box-shadow: 0px 8px 24px rgba(27, 46, 94, 0.12), inset 0 0 0 2px var(--bs-primary);
+            box-shadow:
+              0px 8px 24px rgba(27, 46, 94, 0.12),
+              inset 0 0 0 2px var(--bs-primary);
           }
         }
       }
     }
   }
-  .user-popup{
+  .user-popup {
     position: relative;
     z-index: 5;
   }
-  .user-group{
-    .avtar{
+  .user-group {
+    .avtar {
       width: 30px;
       height: 30px;
     }
   }
-  &.table{
+  &.table {
     border-collapse: separate;
     width: calc(100% - 20px);
     margin: 0 10px;
     border-spacing: 0 10px;
-    tr{
+    tr {
       background: var(--bs-card-bg);
       border: 1px solid var(--bs-border-color);
       border-radius: var(--bs-border-radius);
       box-shadow: 0px 8px 24px rgba(27, 46, 94, 0.08);
-      td{
-        &:nth-child(2){
+      td {
+        &:nth-child(2) {
           cursor: pointer;
         }
       }
     }
-    ul{
+    ul {
       margin-bottom: 0;
     }
   }
@@ -86,7 +88,7 @@
     }
 
     .nav-link.active,
-    .show>.nav-link {
+    .show > .nav-link {
       color: var(--bs-body-color);
       background-color: var(--bs-card-bg);
       box-shadow: 0px 8px 24px rgba(27, 46, 94, 0.08);

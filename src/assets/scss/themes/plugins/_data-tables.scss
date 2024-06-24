@@ -1,8 +1,13 @@
 /**  =====================
   35. Data Tables css start
 ==========================  **/
-.datatable-table > tbody > tr > td, .datatable-table > tbody > tr > th, .datatable-table > tfoot > tr > td, .datatable-table > tfoot > tr > th, .datatable-table > thead > tr > td, .datatable-table > thead > tr > th{
-  vertical-align:middle;
+.datatable-table > tbody > tr > td,
+.datatable-table > tbody > tr > th,
+.datatable-table > tfoot > tr > td,
+.datatable-table > tfoot > tr > th,
+.datatable-table > thead > tr > td,
+.datatable-table > thead > tr > th {
+  vertical-align: middle;
   padding: 0.7rem 0.75rem;
 }
 .datatable-table,
@@ -418,10 +423,11 @@ table.dataTable tbody > tr.selected th.select-checkbox:after {
     overflow: auto;
   }
 }
-.dataTables_scrollHeadInner, .dataTables_scrollFootInner {
-    width: calc( 100% - 6px ) !important;
-} 
-.dataTables_scrollBody{
+.dataTables_scrollHeadInner,
+.dataTables_scrollFootInner {
+  width: calc(100% - 6px) !important;
+}
+.dataTables_scrollBody {
   &::-webkit-scrollbar {
     width: 6px;
     opacity: 0;
@@ -443,21 +449,24 @@ table.dataTable tbody > tr.selected th.select-checkbox:after {
     background: darken($body-bg, 25%);
   }
 }
-table.dataTable tbody th.focus, table.dataTable tbody td.focus {
+table.dataTable tbody th.focus,
+table.dataTable tbody td.focus {
   outline: 2px solid var(--bs-primary);
 }
 div.dt-autofill-handle {
   background: var(--bs-primary);
 }
+table.dataTable:not(.dtcr-cloned) {
+  width: 100% !important;
+}
 table.dataTable {
   border-collapse: collapse !important;
-  width: 100% !important;
   .form-control {
     min-width: 100px;
     padding-right: 30px;
   }
-  >tbody {
-    >tr {
+  > tbody {
+    > tr {
       &.child {
         ul.dtr-details {
           display: block;
@@ -466,7 +475,21 @@ table.dataTable {
     }
   }
 }
-#basic-scroller_wrapper, #state-scroller_wrapper, #api-scroller_wrapper {
+.dt-buttons {
+  ~ .dt-search {
+    margin-bottom: 15px;
+  }
+}
+div.dt-container {
+  div.dt-info {
+    ~ div.dt-paging {
+      margin-top: 10px;
+    }
+  }
+}
+#basic-scroller_wrapper,
+#state-scroller_wrapper,
+#api-scroller_wrapper {
   .dataTables_paginate {
     padding-top: 5px;
   }
@@ -476,7 +499,8 @@ table.dataTable {
     margin-top: 6px;
   }
 }
-.datatable-bottom > nav:last-child, .datatable-bottom > div:last-child {
+.datatable-bottom > nav:last-child,
+.datatable-bottom > div:last-child {
   @media (max-width: 462px) {
     float: left;
   }
@@ -534,16 +558,16 @@ div.dt-button-info {
   z-index: 21;
 
   h2 {
-      padding: 0.5em;
-      margin: 0;
-      font-weight: normal;
-      color: #fff;
-      border-bottom: 1px solid $primary;
-      background-color: $primary;
+    padding: 0.5em;
+    margin: 0;
+    font-weight: normal;
+    color: #fff;
+    border-bottom: 1px solid $primary;
+    background-color: $primary;
   }
 
   > div {
-      padding: 1em;
+    padding: 1em;
   }
 }
 
@@ -558,16 +582,16 @@ div.dt-button-info {
 table.dataTable tbody {
   td.focus,
   th.focus {
-      box-shadow: inset 0 0 1px 2px $primary;
+    box-shadow: inset 0 0 1px 2px $primary;
   }
 }
 
 div.dtk-focus-alt table.dataTable tbody {
   td.focus,
   th.focus {
-      box-shadow: inset 0 0 1px 2px $warning;
-      background: transparentize($warning, 0.85);
-      color: $warning;
+    box-shadow: inset 0 0 1px 2px $warning;
+    background: transparentize($warning, 0.85);
+    color: $warning;
   }
 }
 
@@ -607,40 +631,40 @@ table.dataTable tbody > tr.selected th.select-checkbox:after {
 }
 .datatable-top {
   > div {
-      margin: 5px 0;
-      @media (max-width: 574.98px) {
-          &:last-child {
-              float: left;
-          }
+    margin: 5px 0;
+    @media (max-width: 574.98px) {
+      &:last-child {
+        float: left;
       }
+    }
   }
 }
 
 .datatable-dropdown,
 .dataTable-dropdown {
   label {
-      display: flex;
-      align-items: center;
-      width: 230px;
-      white-space: nowrap;
-      select {
-          margin-right: 8px;
-          margin-left: 0px;
-      }
+    display: flex;
+    align-items: center;
+    width: 230px;
+    white-space: nowrap;
+    select {
+      margin-right: 8px;
+      margin-left: 0px;
+    }
   }
 }
-.datatable-sorter{
+.datatable-sorter {
   padding-right: 18px;
-  &:after{
+  &:after {
     border-top: 0px;
     top: 4px;
   }
-  &::before{
+  &::before {
     border-bottom: 0px;
     bottom: 4px;
   }
 }
-.datatable-pagination{
+.datatable-pagination {
   ul {
     margin: 0;
     padding-left: 0;
@@ -705,17 +729,17 @@ table.dataTable tbody > tr.selected th.select-checkbox:after {
     font-weight: bold;
   }
 }
-.dt-buttons.btn-group.flex-wrap{
-  .btn{
+.dt-buttons.btn-group.flex-wrap {
+  .btn {
     margin-bottom: 5px;
   }
 }
-.dataTable[aria-describedby="no-style_info"]{
-  th{
+.dataTable[aria-describedby='no-style_info'] {
+  th {
     padding: 14px 0;
   }
 }
-div.dataTables_wrapper div.dt-row{
+div.dataTables_wrapper div.dt-row {
   margin-top: 8px !important;
   margin-bottom: 8px !important;
 }

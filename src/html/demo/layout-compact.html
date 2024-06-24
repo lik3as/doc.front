@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <!-- [Head] start -->
   <head>
@@ -7,7 +7,7 @@
   <!-- [Head] end -->
   <!-- [Body] Start -->
   <body @@bodySetup data-pc-direction="ltr">
-    @@include('../layouts/layout-compact.html')
+    @@include('../layouts/layout-vertical.html')
 
     <!-- [ Main Content ] start -->
     <div class="pc-container">
@@ -39,7 +39,9 @@
     </div>
     <!-- [ Main Content ] end -->
     @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html') @@include('../layouts/customizer.html')
-    <script src="../assets/js/layout-compact.js"></script>
+    <script>
+      localStorage.setItem('layout', 'compact');
+    </script>
   </body>
   <!-- [Body] end -->
 </html>

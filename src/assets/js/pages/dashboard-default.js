@@ -109,21 +109,20 @@ function floatchart() {
     chart.render();
     var options5 = {
       chart: {
-        fontFamily: 'Inter var, sans-serif',
         type: 'area',
-        height: 370,
+        height: 300,
         toolbar: {
           show: false
         }
       },
-      colors: ['#0d6efd', '#8996A4'],
+      colors: ['#0d6efd'],
       fill: {
         type: 'gradient',
         gradient: {
           shadeIntensity: 1,
           type: 'vertical',
           inverseColors: false,
-          opacityFrom: 0.2,
+          opacityFrom: 0.5,
           opacityTo: 0
         }
       },
@@ -131,7 +130,7 @@ function floatchart() {
         enabled: false
       },
       stroke: {
-        width: 3
+        width: 1
       },
       plotOptions: {
         bar: {
@@ -140,18 +139,11 @@ function floatchart() {
         }
       },
       grid: {
-        show: true,
-        borderColor: '#F3F5F7',
-        strokeDashArray: 2
+        strokeDashArray: 4
       },
       series: [
         {
-          name: 'Income',
-          data: [20, 70, 40, 70, 70, 90, 50, 55, 45, 60, 50, 65]
-        },
-        {
-          name: 'Expense',
-          data: [10, 40, 20, 40, 50, 70, 80, 30, 15, 32, 90, 30]
+          data: [30, 60, 40, 70, 50, 90, 50, 55, 45, 60, 50, 65]
         }
       ],
       xaxis: {

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="pt-BR">
+<!-- [Head] start -->
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Criar Modelo'})
+  <!-- [Page specific CSS] start -->
+  <link rel="stylesheet" href="../assets/css/plugins/uppy.min.css" />
+  <!-- [Page specific CSS] end -->
+  @@include('../layouts/head-css.html')
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body @@bodySetup>
+  @@include('../layouts/layout-vertical.html')
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Modelos', 'breadcrumb-item-active': 'Criar Modelo'})
+
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ sample-page ] start -->
+        <div class="col-sm-12">
+          <div id="basicwizard" class="form-wizard row justify-content-center">
+            <div class="col-sm-12 col-md-6 col-xxl-4 text-center">
+              <p class="text-muted mb-4">Siga as etapas correspondente para criação do seu modelo de cotrato.
+                <a href="#">Precisa de ajuda?</a>
+              </p>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body p-3">
+                  <ul class="nav nav-pills nav-justified">
+                    <li class="nav-item" data-target-form="#typeFileForm">
+                      <a href="#typeFile" data-bs-toggle="tab" data-toggle="tab" class="nav-link active">
+                        <i class="ph-duotone ph-file-doc"></i>
+                        <span class="d-none d-sm-inline">Tipo de Arquivo</span>
+                      </a>
+                    </li>
+                    <!-- end nav item -->
+                    <li class="nav-item" data-target-form="#uploadFileForm">
+                      <a href="#uploadFile" data-bs-toggle="tab" data-toggle="tab" class="nav-link icon-btn">
+                        <i class="ph-duotone ph-cloud-arrow-up"></i>
+                        <span class="d-none d-sm-inline">Suba o Arquivo</span>
+                      </a>
+                    </li>
+                    <!-- end nav item -->
+                    <li class="nav-item" data-target-form="#finishForm">
+                      <a href="#finish" data-bs-toggle="tab" data-toggle="tab" class="nav-link icon-btn">
+                        <i class="ph-duotone ph-check-circle"></i>
+                        <span class="d-none d-sm-inline">Finalizar</span>
+                      </a>
+                    </li>
+                    <!-- end nav item -->
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="tab-content">
+                    <!-- START: Define your progress bar here -->
+                    <div id="bar" class="progress mb-3" style="height: 7px">
+                      <div class="bar progress-bar progress-bar-striped progress-bar-animated bg-success"></div>
+                    </div>
+                    <!-- END: Define your progress bar here -->
+                    <!-- START: Define your tab pans here -->
+                    <div class="tab-pane show active" id="typeFile">
+                      <form id="typeFileForm">
+                        <div class="text-center">
+                          <h3 class="mb-2">Escolha o tipo de arquivo</h3>
+                        </div>
+                        <br>
+                        <div class="row mt-4 justify-content-center">
+                          <div class="row mb-4" style="width: 450px;">
+                            <div class="col-sm-6">
+                              <div class="auth-option">
+                                <input type="radio" class="btn-check" name="doctype" id="pdf" required />
+                                <label class="auth-megaoption" for="pdf">
+                                  <i class="ph-duotone ph-file-pdf"></i>
+                                  <span class="h5">Arquivo PDF</span>
+                                  <small style="margin: 0 10px 0 10px; text-align: center;">
+                                    O <strong>Arquivo PDF</strong> pode ter ou não alterações em formatação.
+                                  </small>
+                                </label>
+                                <div class="invalid-feedback">Você precisa definir o tipo de arquivo que irá enviar
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="auth-option">
+                                <input type="radio" class="btn-check" name="doctype" id="docx" required />
+                                <label class="auth-megaoption" for="docx">
+                                  <i class="ph-duotone ph-file-dashed"></i>
+                                  <span class="h5">Arquivo DOCX</span>
+                                  <small style="margin: 0 10px 0 10px; text-align: center;">
+                                    O <strong>Arquivo DOCX</strong> será trabalhado com a formatação original.
+                                  </small>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row mt-4 justify-content-center">
+                            <div class="row mb-4" style="width: 600px;">
+                              <h3><span class="badge bg-light-primary">Qual arquivo devo escolher?</span></h3>
+                              <p>
+                                O <strong>arquivo PDF</strong> é ideal para preservar a formatação original, sendo uma
+                                excelente opção quando os arquivos não precisam ser editados e não contêm variáveis.
+                              </p>
+                              <p>
+                                O <strong>arquivo DOCX</strong> é a escolha certa quando há necessidade de futuras
+                                edições
+                                e definição de variáveis, sem comprometer a formatação original do documento.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- end contact detail tab pane -->
+                    <div class="tab-pane" id="uploadFile">
+                      <form id="uploadFileForm">
+                        <div class="text-center">
+                          <h3 class="mb-2">Envie o arquivo que deseja usar</h3>
+                          <small class="text-muted">Defina o nome do modelo que irá criar e depois envie o
+                            arquivo.</small>
+                        </div>
+                        <br>
+                        <div class="row mt-4 justify-content-center">
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="form-label" for="model-name">Escolha o nome do modelo</label>
+                              <input type="text" class="form-control" id="model-name" placeholder="Digite aqui..."
+                                required />
+                              <div class="invalid-feedback">O nome do modelo não foi informado</div>
+                            </div>
+                            <div class="form-file mb-3">
+                              <label class="form-label" for="model-name">Suba o arquivo (somente .docx ou .pdf)</label>
+                              <input type="file" class="form-control" aria-label="file" required />
+                              <div class="invalid-feedback">O arquivo não foi enviado</div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- end job detail tab pane -->
+                    <div class="tab-pane" id="finish">
+                      <form id="finishForm">
+                        <div class="text-center">
+                          <i class="ph-duotone ph-fingerprint f-50 text-primary"></i>
+                          <h3 class="mt-4 mb-3">Modelo Criado !</h3>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                          <div>
+                            <span class="badge bg-light-primary">ID do Modelo</span>
+                            <h6 class="mb-0">
+                              278b1469-bdf2-458d-9299-32a4e715a311
+                              <button onclick="copyModelId('278b1469-bdf2-458d-9299-32a4e715a311')" type="button"
+                                class="btn btn-link">
+                                <svg class="pc-icon">
+                                  <use xlink:href="#custom-copy"></use>
+                                </svg>
+                              </button>
+                            </h6>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row mt-4 justify-content-center">
+                          <div class="row mb-4" style="width: 450px;">
+                            <div class="col-sm-6">
+                              <div class="auth-option">
+                                <input type="radio" class="btn-check check-edit" name="button" id="edit" />
+                                <label class="auth-megaoption" for="edit">
+                                  <i class="ph-duotone ph-textbox"></i>
+                                  <span class="h5">Editar Arquivo</span>
+                                  <small style="margin: 0 10px 0 10px; text-align: center;">
+                                    O <strong>Editar Arquivo</strong> define variavéis com base nas suas necessidades.
+                                  </small>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="auth-option">
+                                <input type="radio" class="btn-check" name="button" id="send" />
+                                <label class="auth-megaoption" for="send">
+                                  <i class="ph-duotone ph-paper-plane-tilt"></i>
+                                  <span class="h5">Enviar em Massa</span>
+                                  <small style="margin: 0 10px 0 10px; text-align: center;">
+                                    O <strong>Enviar em Massa</strong> cria até 50 documentos de um só vez para assinar.
+                                  </small>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- END: Define your tab pans here -->
+                    <!-- START: Define your controller buttons here-->
+                    <div class="d-flex wizard justify-content-between flex-wrap gap-2 mt-3">
+                      <div class="first">
+                        <a href="javascript:void(0);" class="btn btn-primary"> Início </a>
+                      </div>
+                      <div class="d-flex">
+                        <div class="previous me-2">
+                          <a href="javascript:void(0);" class="btn btn-primary"> Voltar </a>
+                        </div>
+                        <div class="next">
+                          <a href="javascript:void(0);" class="btn btn-primary" id="nextButton"> Avançar </a>
+                        </div>
+                      </div>
+                      <div class="last">
+                        <a href="javascript:void(0);" class="btn btn-primary"> Finalizar </a>
+                      </div>
+                    </div>
+                    <!-- END: Define your controller buttons here-->
+                  </div>
+                </div>
+              </div>
+              <!-- end tab content-->
+            </div>
+          </div>
+        </div>
+        <!-- [ sample-page ] end -->
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+  @@include('../layouts/customizer.html')
+  <!-- [Page Specific JS] start -->
+  <script src="../assets/js/plugins/wizard.min.js"></script>
+  <script src="../assets/js/plugins/uppy.min.js"></script>
+  <script src="../assets/js/plugins/uppy/pt_BR.min.js"></script>
+  <script>
+    new Wizard('#basicwizard', {
+      validate: true,
+      progress: true
+    });
+  </script>
+  <script>
+    document.querySelector('.check-edit').addEventListener('click', function () {
+      window.location.href = './edit-models.html?modelId=278b1469-bdf2-458d-9299-32a4e715a311';
+    });
+
+    function copyModelId(modelId) {
+      var input = document.createElement('input');
+      input.value = modelId;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+
+  </script>
+</body>
+<!-- [Body] end -->
+
+</html>

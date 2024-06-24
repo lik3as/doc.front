@@ -3,7 +3,7 @@
 (function () {
   const d_week = new Datepicker(document.querySelector('#d_week'), {
     buttonClass: 'btn',
-    daysOfWeekDisabled: [0,6]
+    daysOfWeekDisabled: [0, 6]
   });
 
   const d_highlight = new Datepicker(document.querySelector('#d_highlight'), {

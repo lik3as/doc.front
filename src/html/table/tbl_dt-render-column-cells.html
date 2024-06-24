@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <!-- [Head] start -->
   <head>
     @@include('../layouts/head-page-meta.html', {'title': 'Render Column Cells'})
-    <link rel="stylesheet" href="../assets/css/plugins/style.css" >
+    <link rel="stylesheet" href="../assets/css/plugins/style.css" />
     @@include('../layouts/head-css.html')
   </head>
   <!-- [Head] end -->
@@ -137,14 +137,14 @@
         data,
         perPage: 25,
         rowRender: (row, tr, _index) => {
-          if ([true, false].includes(row[3].data)) {
+          if ([true, false].includes(row.cells[3].data)) {
             if (!tr.attributes?.class) {
               if (!tr.attributes) {
                 tr.attributes = {};
               }
-              tr.attributes.class = row[3].data === true ? 'text-success' : 'text-danger';
+              tr.attributes.class = row.cells[3].data === true ? 'text-success' : 'text-danger';
             } else {
-              tr.attributes.class += row[3].data === true ? 'text-success' : 'text-danger';
+              tr.attributes.class += row.cells[3].data === true ? 'text-success' : 'text-danger';
             }
           }
         },

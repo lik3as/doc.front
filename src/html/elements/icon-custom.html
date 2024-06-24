@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <!-- [Head] start -->
 
 <head>
@@ -25,15 +25,13 @@
               <h5>Custom Icon</h5>
               <p>Use svg icon with <code>&lt;use&gt;</code> in you html code as given below</p>
               <code>
-                &lt;svg class="pc-icon"&gt;
-                  &lt;use xlink:href="#custom-&lt;&lt; Copied code &gt;&gt;"&gt;&lt;/use&gt;
-                &lt;/svg&gt;
-              </code>
+                  &lt;svg class="pc-icon"&gt; &lt;use xlink:href="#custom-&lt;&lt; Copied code &gt;&gt;"&gt;&lt;/use&gt; &lt;/svg&gt;
+                </code>
             </div>
             <div class="card-body text-center">
               <div class="row justify-content-center">
                 <div class="col-sm-6">
-                  <input type="text" id="icon-search" class="form-control mb-4" placeholder="search . . ">
+                  <input type="text" id="icon-search" class="form-control mb-4" placeholder="search . . " />
                 </div>
               </div>
               <div class="i-main" id="icon-wrapper"></div>
@@ -52,7 +50,86 @@
   <!-- [Page Specific JS] start -->
   <script src="../assets/js/plugins/clipboard.min.js"></script>
   <script>
-    var icon_list = ["custom-home", "custom-document", "custom-user", "custom-box-1", "custom-sort-outline", "custom-level", "custom-notification", "custom-setting-2", "custom-search-normal-1", "custom-layer", "custom-sms", "custom-document-text", "custom-user-bold", "custom-security-safe", "custom-notification-outline", "custom-setting-outline", "custom-share-bold", "custom-lock-outline", "custom-profile-2user-outline", "custom-add-outline", "custom-logout-1-outline", "custom-star-bold", "custom-airplane", "custom-mouse-circle", "custom-refresh-2", "custom-simcard-2", "custom-facebook", "custom-google", "custom-github", "custom-sun-1", "custom-moon", "custom-mask", "custom-mask-1-outline", "custom-bag", "custom-note-1", "custom-video-play", "custom-image", "custom-folder-open", "custom-user-add", "custom-status-up", "custom-notification-status", "custom-crop", "custom-keyboard", "custom-graph", "custom-kanban", "custom-link", "custom-login", "custom-logout", "custom-search-normal", "custom-shapes", "custom-calendar-1", "custom-message-2", "custom-shopping-bag", "custom-document-filter", "custom-direct-inbox", "custom-user-square", "custom-shield", "custom-call-calling", "custom-dollar-square", "custom-flag", "custom-data", "custom-presentation-chart", "custom-cpu-charge", "custom-text-block", "custom-row-vertical", "custom-document-upload", "custom-password-check", "custom-24-support", "custom-fatrows", "custom-element-plus", "custom-add-item", "custom-clipboard", "custom-story", "custom-text-align-justify-center"];
+    var icon_list = [
+      'custom-home',
+      'custom-document',
+      'custom-user',
+      'custom-box-1',
+      'custom-sort-outline',
+      'custom-level',
+      'custom-notification',
+      'custom-setting-2',
+      'custom-search-normal-1',
+      'custom-layer',
+      'custom-sms',
+      'custom-document-text',
+      'custom-user-bold',
+      'custom-security-safe',
+      'custom-notification-outline',
+      'custom-setting-outline',
+      'custom-share-bold',
+      'custom-lock-outline',
+      'custom-profile-2user-outline',
+      'custom-add-outline',
+      'custom-logout-1-outline',
+      'custom-star-bold',
+      'custom-airplane',
+      'custom-mouse-circle',
+      'custom-refresh-2',
+      'custom-simcard-2',
+      'custom-facebook',
+      'custom-google',
+      'custom-github',
+      'custom-sun-1',
+      'custom-moon',
+      'custom-mask',
+      'custom-mask-1-outline',
+      'custom-bag',
+      'custom-note-1',
+      'custom-video-play',
+      'custom-image',
+      'custom-folder-open',
+      'custom-user-add',
+      'custom-status-up',
+      'custom-notification-status',
+      'custom-crop',
+      'custom-keyboard',
+      'custom-graph',
+      'custom-kanban',
+      'custom-link',
+      'custom-login',
+      'custom-logout',
+      'custom-search-normal',
+      'custom-shapes',
+      'custom-calendar-1',
+      'custom-message-2',
+      'custom-shopping-bag',
+      'custom-document-filter',
+      'custom-direct-inbox',
+      'custom-user-square',
+      'custom-shield',
+      'custom-call-calling',
+      'custom-dollar-square',
+      'custom-flag',
+      'custom-data',
+      'custom-presentation-chart',
+      'custom-cpu-charge',
+      'custom-text-block',
+      'custom-row-vertical',
+      'custom-document-upload',
+      'custom-password-check',
+      'custom-24-support',
+      'custom-fatrows',
+      'custom-element-plus',
+      'custom-add-item',
+      'custom-clipboard',
+      'custom-story',
+      'custom-text-align-justify-center',
+      'custom-2user-bold', 
+      'custom-messagetext-1-outline', 
+      'custom-buliding',
+      'custom-copy',
+    ];
     for (var i = 0, l = icon_list.length; i < l; i++) {
       let icon_block = document.createElement('div');
       icon_block.setAttribute('class', 'i-block');
@@ -73,7 +150,7 @@
     }
     window.addEventListener('load', (event) => {
       var cont = document.querySelector('#icon-wrapper').innerHTML;
-      document.querySelector('#icon-wrapper').innerHTML = "";
+      document.querySelector('#icon-wrapper').innerHTML = '';
       document.querySelector('#icon-wrapper').innerHTML = cont;
 
       var i_copy = new ClipboardJS('.i-block');

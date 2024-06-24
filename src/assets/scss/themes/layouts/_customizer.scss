@@ -57,7 +57,7 @@
   transition: transform 0.45s cubic-bezier(0.37, 0.24, 0.53, 0.99);
   box-shadow: 8px 0 14px rgba(27, 46, 94, 0.4);
 
-  ~.offcanvas-backdrop {
+  ~ .offcanvas-backdrop {
     opacity: 0.2;
   }
 
@@ -73,7 +73,7 @@
   .list-group-item {
     padding: 20px 0;
 
-    >div>.pct-content,
+    > div > .pct-content,
     a.btn {
       padding: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);
     }
@@ -93,10 +93,10 @@
   &.active {
     border-color: var(--bs-primary);
   }
-  &.btn-img{
+  &.btn-img {
     height: auto;
     border-radius: 8px;
-    img{
+    img {
       width: 100%;
     }
   }
@@ -121,7 +121,7 @@
     flex: none;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 5px;
       left: 5px;
@@ -143,8 +143,8 @@
         z-index: 5;
       }
     }
-    &:hover{
-      &::after{
+    &:hover {
+      &::after {
         transform: scale(1);
       }
     }
@@ -160,8 +160,8 @@
     $i: 1;
     @each $name, $value in $preset-colors {
       > a {
-        &[data-value="preset-#{$i}"] {
-          background: map-get($value, "primary");
+        &[data-value='preset-#{$i}'] {
+          background: map-get($value, 'primary');
         }
       }
       $i: $i + 1;
@@ -169,11 +169,21 @@
   }
 }
 
-
 .theme-layout {
   .btn {
     i {
       font-size: 26px;
+    }
+  }
+}
+
+.theme-main-layout {
+  a {
+    padding: 5px;
+    border: 2px solid var(--bs-gray-300);
+    border-radius: 8px;
+    &.active {
+      border: 2px solid var(--bs-primary);
     }
   }
 }
@@ -191,10 +201,10 @@
   }
 }
 
-.pc-box-width{
+.pc-box-width {
   @include media-breakpoint-down(xl) {
     display: none;
-   }
+  }
 }
 [data-pc-layout='compact'] [data-pc-layout='horizontal'] {
   .pc-rtl {
@@ -203,7 +213,7 @@
 }
 
 .auth-main {
-  ~.pct-offcanvas {
+  ~ .pct-offcanvas {
     .pc-boxcontainer {
       display: none;
     }

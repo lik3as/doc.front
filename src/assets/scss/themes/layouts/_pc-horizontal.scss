@@ -4,10 +4,10 @@
 
 [data-pc-layout='horizontal'] {
   @media (min-width: 1025px) {
-    .pc-header{
+    .pc-header {
       z-index: 1027;
       box-shadow: none;
-      .pc-h-item.pc-sidebar-collapse{
+      .pc-h-item.pc-sidebar-collapse {
         display: none;
       }
     }
@@ -18,10 +18,11 @@
       height: $topbar-height;
       overflow: visible;
       .navbar-content,
-      .m-header{
+      .m-header {
         background: var(--pc-header-background);
         backdrop-filter: blur(7px);
       }
+      .pc-badge,
       .pc-caption:not(:first-child):after {
         display: none;
       }
@@ -29,16 +30,16 @@
         width: 100%;
       }
       .navbar-content {
-        height: auto;
+        height: 57px;
         padding: 6px 20px;
         box-shadow: var(--pc-sidebar-shadow);
         border-bottom: var(--pc-sidebar-border);
         .simplebar-mask,
-        .simplebar-content-wrapper{
+        .simplebar-content-wrapper {
           overflow: visible !important;
         }
       }
-      
+
       .pc-link {
         display: block;
         align-items: center;
@@ -59,7 +60,7 @@
           vertical-align: middle;
         }
       }
-      .card{
+      .card {
         display: none;
       }
       .pc-navbar {
@@ -68,14 +69,14 @@
           display: flex;
           align-items: center;
         }
-        
+
         > .pc-item {
           position: relative;
           margin: 0;
-          &:hover:not(.active){
-            > .pc-link{
+          &:hover:not(.active) {
+            > .pc-link {
               color: var(--bs-primary);
-              &:after{
+              &:after {
                 background: var(--bs-primary);
               }
             }
@@ -89,16 +90,16 @@
             }
           }
 
-          >.pc-submenu.edge {
+          > .pc-submenu.edge {
             left: auto;
             right: 0;
           }
 
-          >.pc-link {
+          > .pc-link {
             margin-left: 2px;
             margin-right: 2px;
 
-            >.pc-arrow {
+            > .pc-arrow {
               transform: rotate(90deg);
               margin-left: 10px;
             }
@@ -138,7 +139,7 @@
         display: inline-block;
         transition: all 0.2s ease-in-out;
 
-        >svg {
+        > svg {
           width: 14px;
           height: 14px;
         }
@@ -161,7 +162,7 @@
           display: block;
           position: relative;
 
-          .pc-submenu>.pc-item:before,
+          .pc-submenu > .pc-item:before,
           &::before {
             left: 20px;
           }
@@ -172,7 +173,6 @@
             padding: 12px 15px 12px 20px;
 
             .pc-icon {
-
               svg,
               i {
                 color: var(--pc-sidebar-color);
@@ -184,8 +184,8 @@
             }
           }
 
-          &:hover>.pc-link,
-          &>.pc-link:hover {
+          &:hover > .pc-link,
+          & > .pc-link:hover {
             color: var(--bs-primary);
           }
         }
@@ -205,9 +205,6 @@
             bottom: -15px;
 
             &.edge-alt-full {
-              overflow-x: hidden;
-              overflow-y: auto;
-
               &::-webkit-scrollbar {
                 width: 6px;
                 opacity: 0;
@@ -228,9 +225,10 @@
               &::-webkit-scrollbar-thumb:hover {
                 background: darken($body-bg, 25%);
               }
-
-              .pc-submenu.edge,
               .pc-submenu {
+                left: 200px;
+              }
+              .pc-submenu.edge {
                 left: 0;
               }
             }
@@ -244,8 +242,8 @@
         }
 
         &:hover {
-          >.pc-submenu {
-            display: block;
+          > .pc-submenu {
+            display: block !important;
           }
         }
       }
@@ -258,7 +256,7 @@
 
     .pc-container {
       .pc-content {
-        >.row:first-child {
+        > .row:first-child {
           padding-top: 20px;
         }
       }
@@ -273,21 +271,19 @@
   }
 
   &[data-pc-direction='rtl'] {
-
     .pc-container,
     .pc-footer {
       margin-right: 20px;
     }
 
     @media (min-width: 1025px) {
-
       .pc-sidebar {
         .pc-arrow {
           margin-right: auto;
           margin-left: 0;
         }
 
-        .pc-navbar>.pc-item .pc-submenu {
+        .pc-navbar > .pc-item .pc-submenu {
           .pc-item {
             &:before {
               right: 20px;

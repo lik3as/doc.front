@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="pt-BR">
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Perfil da Empresa'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body @@bodySetup>
+    @@include('../layouts/layout-vertical.html')
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Usuário', 'breadcrumb-item-active': 'Perfil da Empresa'})
+        <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ sample-page ] start -->
+        <div class="col-sm-12">
+            <div class="card">
+              <div class="card-body py-0">
+                <ul class="nav nav-tabs profile-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="profile-tab-1" data-bs-toggle="tab" href="#profile-1" role="tab"
+                      aria-selected="true">
+                      <i class="ti ti-building me-2"></i>Perfil
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="profile-tab-2" data-bs-toggle="tab" href="#profile-2" role="tab"
+                      aria-selected="true">
+                      <i class="ti ti-file-text me-2"></i>Detalhes da Empresa
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="profile-tab-3" data-bs-toggle="tab" href="#profile-3" role="tab"
+                      aria-selected="true">
+                      <i class="ti ti-credit-card me-2"></i>Assinatura
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="profile-tab-5" data-bs-toggle="tab" href="#profile-4" role="tab"
+                      aria-selected="true">
+                      <i class="ti ti-users me-2"></i>Equipe
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane show active" id="profile-1" role="tabpanel" aria-labelledby="profile-tab-1">
+                <div class="row">
+                  <div class="col-lg-4 col-xxl-3">
+                    <div class="card">
+                      <div class="card-body position-relative">
+                        <div class="position-absolute end-0 top-0 p-3">
+                          <span class="badge bg-primary">Profissional</span>
+                        </div>
+                        <div class="text-center mt-3">
+                          <div class="chat-avtar d-inline-flex mx-auto">
+                            <img class="rounded-circle img-fluid wid-70" src="../assets/images/logo-abcb.webp"
+                              alt="User image">
+                          </div>
+                          <h5 class="mb-0">AMAR BRASIL CLUBE DE BENEFÍCIOS</h5>
+                          <p class="text-muted text-sm">76.265.734/0001-64</p>
+                          <hr class="my-3 border border-secondary-subtle">
+                          <div class="row g-3">
+                            <div class="col-4">
+                              <h5 class="mb-0">10.000</h5>
+                              <small class="text-muted">Contratos</small>
+                            </div>
+                            <div class="col-4 border border-top-0 border-bottom-0">
+                              <h5 class="mb-0">9.890</h5>
+                              <small class="text-muted">Assinados</small>
+                            </div>
+                            <div class="col-4">
+                              <h5 class="mb-0">5</h5>
+                              <small class="text-muted">Equipe</small>
+                            </div>
+                          </div>
+                          <hr class="my-3 border border-secondary-subtle">
+                          <div class="inline-flex-container">
+                            <i class="ti ti-mail me-2"></i>
+                            <p class="mb-0">contato@abcbbr.org</p>
+                          </div>
+                          <div class="inline-flex-container">
+                            <i class="ti ti-phone me-2"></i>
+                            <p class="mb-0">+55 35 98436-8617</p>
+                          </div>
+                          <div class="inline-flex-container">
+                            <i class="ti ti-map-pin me-2"></i>
+                            <p class="mb-0">Brasil</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-8 col-xxl-9">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Detalhes da Empresa</h5>
+                      </div>
+                      <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item px-0 pt-0">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p class="mb-1 text-muted">Razão Social</p>
+                                <p class="mb-0">AMAR BRASIL CLUBE DE BENEFÍCIOS</p>
+                              </div>
+                              <div class="col-md-6">
+                                <p class="mb-1 text-muted">Telefone</p>
+                                <p class="mb-0">+55 35 98436-8617</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item px-0">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p class="mb-1 text-muted">Email</p>
+                                <p class="mb-0">contato@abcbbr.org</p>
+                              </div>
+                              <div class="col-md-6">
+                                <p class="mb-1 text-muted">Pais</p>
+                                <p class="mb-0">Brasil</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item px-0">
+                            <div class="row">
+                              <div class="col-md-4">
+                                <p class="mb-1 text-muted">CEP</p>
+                                <p class="mb-0">79304-072</p>
+                              </div>
+                              <div class="col-md-4">
+                                <p class="mb-1 text-muted">Endereço</p>
+                                <p class="mb-0">Alameda São Bento</p>
+                              </div>
+                              <div class="col-md-4">
+                                <p class="mb-1 text-muted">Número</p>
+                                <p class="mb-0">56</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item px-0">
+                            <div class="row">
+                              <div class="col-md-4">
+                                <p class="mb-1 text-muted">Bairro</p>
+                                <p class="mb-0">Universitário</p>
+                              </div>
+                              <div class="col-md-4">
+                                <p class="mb-1 text-muted">Cidade</p>
+                                <p class="mb-0">Corumbá</p>
+                              </div>
+                              <div class="col-md-4">
+                                <p class="mb-1 text-muted">Estado</p>
+                                <p class="mb-0">MS</p>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="profile-2" role="tabpanel" aria-labelledby="profile-tab-2">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Informações da Empresa</h5>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-sm-12 text-center mb-3">
+                            <div class="user-upload wid-75">
+                              <img src="../assets/images/logo-abcb.webp" alt="img" class="img-fluid">
+                              <label for="uplfile" class="img-avtar-upload">
+                                <i class="ti ti-camera f-24 mb-1"></i>
+                                <span>Enviar</span>
+                              </label>
+                              <input type="file" id="uplfile" class="d-none">
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="form-label">Razão Social</label>
+                              <input type="text" class="form-control" value="AMAR BRASIL CLUBE DE BENEFÍCIOS">
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="form-label">CEP</label>
+                              <input type="text" class="form-control" value="79304-072">
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="form-label">Endereço</label>
+                              <input type="text" class="form-control" value="Alameda São Bento">
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="form-label">Bairro</label>
+                              <input type="text" class="form-control" value="Universitário">
+                            </div>
+                          </div>
+                          <div class="col-sm-2">
+                            <div class="form-group">
+                              <label class="form-label">Número</label>
+                              <input type="text" class="form-control" value="56">
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="form-label">Cidade</label>
+                              <input type="text" class="form-control" value="Corumbá">
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                              <label class="form-label">Estado</label>
+                              <input type="text" class="form-control" value="MS">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Informações de Contato</h5>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="form-label">Telefone</label>
+                              <input type="text" class="form-control" value="+55 35 98436-8617">
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="form-label">Email <span class="text-danger">*</span></label>
+                              <input type="text" class="form-control" value="contato@abcbbr.org">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 text-end btn-page">
+                    <div class="btn btn-outline-secondary">Cancelar</div>
+                    <div class="btn btn-primary">Atualizar Perfil</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="profile-3" role="tabpanel" aria-labelledby="profile-tab-3">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Configurações Avançadas</h5>
+                      </div>
+                      <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item px-0">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <div>
+                                <p class="mb-1">Notificações de Cobrança</p>
+                                <p class="text-muted text-sm mb-0">Notificar quando houver débitos pendentes para que sejam regularizados.</p>
+                                <span class="badge bg-light-warning">O não pagamento ainda que sem aviso resultará em suspensão</span>
+                              </div>
+                              <div class="form-check form-switch p-0">
+                                <input class="form-check-input h4 position-relative m-0" type="checkbox" role="switch"
+                                  checked="">
+                              </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item px-0 pb-0">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <div>
+                                <p class="mb-1">Notificações de Alerta</p>
+                                <p class="text-muted text-sm mb-0">Notificar três dias antes do vencimento.</p>
+                              </div>
+                              <div class="form-check form-switch p-0">
+                                <input class="form-check-input h4 position-relative m-0" type="checkbox" role="switch"
+                                  checked="">
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Transações Recentes</h5>
+                      </div>
+                      <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item px-0 pt-0">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <div class="me-2">
+                                <p class="mb-2">R$ 50,00</p>
+                                <span class="badge bg-primary">CARTÃO DE CRÉDITO</span>
+                                <span class="badge bg-light-warning">17/05/2024</span>
+                              </div>
+                              <div class="">
+                                <div class="text-warning d-inline-block me-2">
+                                  <i class="fas fa-circle f-10 me-2"></i>
+                                  Pendente
+                                </div>
+                                <a href="#!" class="text-alert"><i class="feather icon-alert-triangle"></i></a>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item px-0">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <div class="me-2">
+                                <p class="mb-2">R$ 50,00</p>
+                                <span class="badge bg-primary">PIX</span>
+                                <span class="badge bg-light-success">17/04/2024</span>
+                              </div>
+                              <div class="">
+                                <div class="text-success d-inline-block me-2">
+                                  <i class="fas fa-circle f-10 me-2"></i>
+                                  Em Dia
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="flex-shrink-0" style="text-align: center !important">
+                          <button class="btn btn-link-primary">Ver Todas</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="profile-4" role="tabpanel" aria-labelledby="profile-tab-5">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Convide Membros da Equipe</h5>
+                  </div>
+                  <div class="card-body">
+                    <h4>3/10 <small>membros disponíveis em seu plano.</small></h4>
+                    <hr class="my-3">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <label class="form-label">Endereço de Email</label>
+                          <div class="row">
+                            <div class="col">
+                              <input type="email" class="form-control">
+                            </div>
+                            <div class="col-auto">
+                              <button class="btn btn-primary">Enviar Convite</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body table-card">
+                    <div class="table-responsive">
+                      <table class="table mb-0">
+                        <thead>
+                          <tr>
+                            <th>MEMBRO</th>
+                            <th>FUNÇÃO</th>
+                            <th class="text-end">STATUS</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="row">
+                                <div class="col-auto pe-0">
+                                  <img src="../assets/images/user/avatar-1.jpg" alt="user-image"
+                                    class="wid-40 rounded-circle">
+                                </div>
+                                <div class="col">
+                                  <h5 class="mb-0">Igor Dias</h5>
+                                  <p class="text-muted f-12 mb-0">igor@powerbi.com</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td><span class="badge bg-primary">Proprietário</span></td>
+                            <td class="text-end"><span class="badge bg-success">Ingressou</span></td>
+                            <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
+                                  class="ti ti-dots f-18"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="row">
+                                <div class="col-auto pe-0">
+                                  <img src="../assets/images/user/avatar-5.jpg" alt="user-image"
+                                    class="wid-40 rounded-circle">
+                                </div>
+                                <div class="col">
+                                  <h5 class="mb-0">Gabriel Camargo</h5>
+                                  <p class="text-muted f-12 mb-0">contato@abcbbr.org</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td><span class="badge bg-light-warning">Funcionário</span></td>
+                            <td class="text-end"><a href="#" class="btn btn-link-danger">Reenviar</a> <span
+                                class="badge bg-light-success">Convidado</span></td>
+                            <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
+                                  class="ti ti-dots f-18"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="row">
+                                <div class="col-auto pe-0">
+                                  <img src="../assets/images/user/avatar-4.jpg" alt="user-image"
+                                    class="wid-40 rounded-circle">
+                                </div>
+                                <div class="col">
+                                  <h5 class="mb-0">Marcelo Medina</h5>
+                                  <p class="text-muted f-12 mb-0">email@marcelomedina.com</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td><span class="badge bg-light-info">Gerente</span></td>
+                            <td class="text-end"><span class="badge bg-success">Ingressou</span></td>
+                            <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
+                                  class="ti ti-dots f-18"></i></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ sample-page ] end -->
+      </div>
+      <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html') @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

@@ -138,13 +138,7 @@ header {
   --color-one: rgb(37, 161, 244);
   --color-two: rgb(249, 31, 169);
 
-  background: linear-gradient(
-      90deg,
-      var(--color-one),
-      var(--color-two),
-      var(--color-one)
-    )
-    0 0 / var(--bg-size) 100%;
+  background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -251,6 +245,8 @@ header {
 
     p {
       white-space: pre-wrap;
+      height: 62px;
+      overflow: hidden;
     }
   }
 }
@@ -365,7 +361,7 @@ header {
   header {
     text-align: center;
     padding: 100px 0;
-    h1{
+    h1 {
       font-size: 25px;
     }
     .technology-block {
@@ -380,7 +376,7 @@ header {
 
         img {
           padding: 8px;
-          width: 55px;
+          width: 40px;
         }
       }
     }
@@ -394,7 +390,6 @@ header {
 
 [data-pc-theme='dark'] {
   &.landing-page {
-
     .bg-white {
       background: lighten($dark-layout-color, 4%) !important;
       --bs-white: lighten($dark-layout-color, 4%);
@@ -418,8 +413,8 @@ header {
   }
 }
 
-[data-pc-direction="rtl"] {
-  header{
+[data-pc-direction='rtl'] {
+  header {
     .technology-block {
       .list-inline-item {
         border-right: none;
@@ -431,7 +426,6 @@ header {
         }
       }
     }
-  
   }
   .img-app-moke {
     transform-origin: 100% 0;

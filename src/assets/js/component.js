@@ -3,7 +3,6 @@
 // ==================    ui kit model code   ===============
 // =========================================================
 (function () {
-  
   function hasClass(el, cls) {
     return el.className.split(' ').indexOf(cls) !== -1;
   }
@@ -130,5 +129,4 @@
       else btn_md_collapse.parentElement.childNodes[0].style.display = 'none';
     });
   });
-
 })();

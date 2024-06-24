@@ -1,20 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- [Head] start -->
+<!doctype html>
+<html lang="pt-BR">
+  <!-- [Head] start -->
 
-<head>
-  @@include('../layouts/head-page-meta.html', {'title': 'Account Profile 1'}) @@include('../layouts/head-css.html')
-</head>
-<!-- [Head] end -->
-<!-- [Body] Start -->
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Perfil da Conta'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
 
-<body @@bodySetup>
-  @@include('../layouts/layout-vertical.html')
-  <!-- [ Main Content ] start -->
-  <div class="pc-container">
-    <div class="pc-content">
-      @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Users', 'breadcrumb-item-active': 'Account Profile'})
-      <!-- [ Main Content ] start -->
+  <body @@bodySetup>
+    @@include('../layouts/layout-vertical.html')
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Usuário', 'breadcrumb-item-active': 'Perfil da Conta'})
+        <!-- [ Main Content ] start -->
       <div class="row">
         <!-- [ sample-page ] start -->
         <div class="col-sm-12">
@@ -24,37 +24,37 @@
                 <li class="nav-item">
                   <a class="nav-link active" id="profile-tab-1" data-bs-toggle="tab" href="#profile-1" role="tab"
                     aria-selected="true">
-                    <i class="ti ti-user me-2"></i>Profile
+                    <i class="ti ti-user me-2"></i>Perfil
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" id="profile-tab-2" data-bs-toggle="tab" href="#profile-2" role="tab"
                     aria-selected="true">
-                    <i class="ti ti-file-text me-2"></i>Personal Details
+                    <i class="ti ti-file-text me-2"></i>Detalhes Pessoais
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" id="profile-tab-3" data-bs-toggle="tab" href="#profile-3" role="tab"
                     aria-selected="true">
-                    <i class="ti ti-id me-2"></i>My Account
+                    <i class="ti ti-id me-2"></i>Segurança
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" id="profile-tab-4" data-bs-toggle="tab" href="#profile-4" role="tab"
                     aria-selected="true">
-                    <i class="ti ti-lock me-2"></i>Change Password
+                    <i class="ti ti-lock me-2"></i>Alterar Senha
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="profile-tab-5" data-bs-toggle="tab" href="#profile-5" role="tab"
+                  <a class="nav-link" id="profile-tab-6" data-bs-toggle="tab" href="#profile-5" role="tab"
                     aria-selected="true">
-                    <i class="ti ti-users me-2"></i>Role
+                    <i class="ti ti-settings me-2"></i>Configurações
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="profile-tab-6" data-bs-toggle="tab" href="#profile-6" role="tab"
+                  <a class="nav-link" id="profile-tab-7" data-bs-toggle="tab" href="#profile-6" role="tab"
                     aria-selected="true">
-                    <i class="ti ti-settings me-2"></i>Settings
+                    <i class="ti ti-server me-2"></i>Desenvolvedor
                   </a>
                 </li>
               </ul>
@@ -67,157 +67,42 @@
                   <div class="card">
                     <div class="card-body position-relative">
                       <div class="position-absolute end-0 top-0 p-3">
-                        <span class="badge bg-primary">Pro</span>
+                        <span class="badge bg-primary">Profissional</span>
                       </div>
                       <div class="text-center mt-3">
                         <div class="chat-avtar d-inline-flex mx-auto">
                           <img class="rounded-circle img-fluid wid-70" src="../assets/images/user/avatar-5.jpg"
                             alt="User image">
                         </div>
-                        <h5 class="mb-0">Anshan H.</h5>
-                        <p class="text-muted text-sm">Project Manager</p>
+                        <h5 class="mb-0">Gabriel C.</h5>
+                        <p class="text-muted text-sm">AMAR BRASIL CLUBE DE BENEFÍCIOS</p>
                         <hr class="my-3 border border-secondary-subtle">
                         <div class="row g-3">
                           <div class="col-4">
                             <h5 class="mb-0">86</h5>
-                            <small class="text-muted">Post</small>
+                            <small class="text-muted">Contratos</small>
                           </div>
                           <div class="col-4 border border-top-0 border-bottom-0">
                             <h5 class="mb-0">40</h5>
-                            <small class="text-muted">Project</small>
+                            <small class="text-muted">Assinados</small>
                           </div>
                           <div class="col-4">
-                            <h5 class="mb-0">4.5K</h5>
-                            <small class="text-muted">Members</small>
+                            <h5 class="mb-0">5</h5>
+                            <small class="text-muted">Equipe</small>
                           </div>
                         </div>
                         <hr class="my-3 border border-secondary-subtle">
-                        <div class="d-inline-flex align-items-center justify-content-start w-100 mb-3">
+                        <div class="inline-flex-container">
                           <i class="ti ti-mail me-2"></i>
-                          <p class="mb-0">anshan@gmail.com</p>
+                          <p class="mb-0">contato@abcbbr.org</p>
                         </div>
-                        <div class="d-inline-flex align-items-center justify-content-start w-100 mb-3">
+                        <div class="inline-flex-container">
                           <i class="ti ti-phone me-2"></i>
-                          <p class="mb-0">(+1-876) 8654 239 581</p>
+                          <p class="mb-0">+55 35 98436-8617</p>
                         </div>
-                        <div class="d-inline-flex align-items-center justify-content-start w-100 mb-3">
+                        <div class="inline-flex-container">
                           <i class="ti ti-map-pin me-2"></i>
-                          <p class="mb-0">New York</p>
-                        </div>
-                        <div class="d-inline-flex align-items-center justify-content-start w-100">
-                          <i class="ti ti-link me-2"></i>
-                          <a href="#" class="link-primary">
-                            <p class="mb-0">https://anshan.dh.url</p>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5>Skills</h5>
-                    </div>
-                    <div class="card-body">
-                      <div class="row align-items-center mb-3">
-                        <div class="col-sm-6 mb-2 mb-sm-0">
-                          <p class="mb-0">Junior</p>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="d-flex align-items-center">
-                            <div class="flex-grow-1 me-3">
-                              <div class="progress progress-primary " style="height: 6px;">
-                                <div class="progress-bar" style="width: 30%;"></div>
-                              </div>
-                            </div>
-                            <div class="flex-shrink-0">
-                              <p class="mb-0 text-muted">30%</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row align-items-center mb-3">
-                        <div class="col-sm-6 mb-2 mb-sm-0">
-                          <p class="mb-0">UX Researcher</p>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="d-flex align-items-center">
-                            <div class="flex-grow-1 me-3">
-                              <div class="progress progress-primary " style="height: 6px;">
-                                <div class="progress-bar" style="width: 80%;"></div>
-                              </div>
-                            </div>
-                            <div class="flex-shrink-0">
-                              <p class="mb-0 text-muted">80%</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row align-items-center mb-3">
-                        <div class="col-sm-6 mb-2 mb-sm-0">
-                          <p class="mb-0">Wordpress</p>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="d-flex align-items-center">
-                            <div class="flex-grow-1 me-3">
-                              <div class="progress progress-primary " style="height: 6px;">
-                                <div class="progress-bar" style="width: 90%;"></div>
-                              </div>
-                            </div>
-                            <div class="flex-shrink-0">
-                              <p class="mb-0 text-muted">90%</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row align-items-center mb-3">
-                        <div class="col-sm-6 mb-2 mb-sm-0">
-                          <p class="mb-0">HTML</p>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="d-flex align-items-center">
-                            <div class="flex-grow-1 me-3">
-                              <div class="progress progress-primary " style="height: 6px;">
-                                <div class="progress-bar" style="width: 30%;"></div>
-                              </div>
-                            </div>
-                            <div class="flex-shrink-0">
-                              <p class="mb-0 text-muted">30%</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row align-items-center mb-3">
-                        <div class="col-sm-6 mb-2 mb-sm-0">
-                          <p class="mb-0">Graphic Design</p>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="d-flex align-items-center">
-                            <div class="flex-grow-1 me-3">
-                              <div class="progress progress-primary " style="height: 6px;">
-                                <div class="progress-bar" style="width: 95%;"></div>
-                              </div>
-                            </div>
-                            <div class="flex-shrink-0">
-                              <p class="mb-0 text-muted">95%</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row align-items-center">
-                        <div class="col-sm-6 mb-2 mb-sm-0">
-                          <p class="mb-0">Code Style</p>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="d-flex align-items-center">
-                            <div class="flex-grow-1 me-3">
-                              <div class="progress progress-primary " style="height: 6px;">
-                                <div class="progress-bar" style="width: 75%;"></div>
-                              </div>
-                            </div>
-                            <div class="flex-shrink-0">
-                              <p class="mb-0 text-muted">75%</p>
-                            </div>
-                          </div>
+                          <p class="mb-0">Brasil</p>
                         </div>
                       </div>
                     </div>
@@ -226,41 +111,19 @@
                 <div class="col-lg-8 col-xxl-9">
                   <div class="card">
                     <div class="card-header">
-                      <h5>About me</h5>
-                    </div>
-                    <div class="card-body">
-                      <p class="mb-0">Hello, I’m Anshan Handgun Creative Graphic Designer & User Experience Designer
-                        based in Website, I create digital Products a more Beautiful and usable place. Morbid
-                        accusant ipsum. Nam nec tellus at.</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5>Personal Details</h5>
+                      <h5>Detalhes Pessoais</h5>
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item px-0 pt-0">
                           <div class="row">
                             <div class="col-md-6">
-                              <p class="mb-1 text-muted">Full Name</p>
-                              <p class="mb-0">Anshan Handgun</p>
+                              <p class="mb-1 text-muted">Nome Completo</p>
+                              <p class="mb-0">Gabriel Camargo</p>
                             </div>
                             <div class="col-md-6">
-                              <p class="mb-1 text-muted">Father Name</p>
-                              <p class="mb-0">Mr. Deepen Handgun</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item px-0">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Phone</p>
-                              <p class="mb-0">(+1-876) 8654 239 581</p>
-                            </div>
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Country</p>
-                              <p class="mb-0">New York</p>
+                              <p class="mb-1 text-muted">Telefone</p>
+                              <p class="mb-0">+55 35 98436-8617</p>
                             </div>
                           </div>
                         </li>
@@ -268,112 +131,50 @@
                           <div class="row">
                             <div class="col-md-6">
                               <p class="mb-1 text-muted">Email</p>
-                              <p class="mb-0">anshan.dh81@gmail.com</p>
+                              <p class="mb-0">contato@abcbbr.org</p>
                             </div>
                             <div class="col-md-6">
-                              <p class="mb-1 text-muted">Zip Code</p>
-                              <p class="mb-0">956 754</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item px-0 pb-0">
-                          <p class="mb-1 text-muted">Address</p>
-                          <p class="mb-0">Street 110-B Kalians Bag, Dewan, M.P. New York</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5>Education</h5>
-                    </div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item px-0 pt-0">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Master Degree (Year)</p>
-                              <p class="mb-0">2014-2017</p>
-                            </div>
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Institute</p>
-                              <p class="mb-0">-</p>
+                              <p class="mb-1 text-muted">Pais</p>
+                              <p class="mb-0">Brasil</p>
                             </div>
                           </div>
                         </li>
                         <li class="list-group-item px-0">
                           <div class="row">
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Bachelor (Year)</p>
-                              <p class="mb-0">2011-2013</p>
+                            <div class="col-md-4">
+                              <p class="mb-1 text-muted">CEP</p>
+                              <p class="mb-0">79304-072</p>
                             </div>
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Institute</p>
-                              <p class="mb-0">Imperial College London</p>
+                            <div class="col-md-4">
+                              <p class="mb-1 text-muted">Endereço</p>
+                              <p class="mb-0">Alameda São Bento</p>
                             </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item px-0 pb-0">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">School (Year)</p>
-                              <p class="mb-0">2009-2011</p>
-                            </div>
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Institute</p>
-                              <p class="mb-0">School of London, England</p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <h5>Employment</h5>
-                    </div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item px-0 pt-0">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Senior</p>
-                              <p class="mb-0">Senior UI/UX designer (Year)</p>
-                            </div>
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Job Responsibility</p>
-                              <p class="mb-0">Perform task related to project manager with the 100+ team under my
-                                observation. Team management is key role in this company.</p>
+                            <div class="col-md-4">
+                              <p class="mb-1 text-muted">Número</p>
+                              <p class="mb-0">56</p>
                             </div>
                           </div>
                         </li>
                         <li class="list-group-item px-0">
                           <div class="row">
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Trainee cum Project Manager (Year)</p>
-                              <p class="mb-0">2017-2019</p>
+                            <div class="col-md-4">
+                              <p class="mb-1 text-muted">Bairro</p>
+                              <p class="mb-0">Universitário</p>
                             </div>
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Job Responsibility</p>
-                              <p class="mb-0">Team management is key role in this company.</p>
+                            <div class="col-md-4">
+                              <p class="mb-1 text-muted">Cidade</p>
+                              <p class="mb-0">Corumbá</p>
                             </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item px-0 pb-0">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">School (Year)</p>
-                              <p class="mb-0">2009-2011</p>
-                            </div>
-                            <div class="col-md-6">
-                              <p class="mb-1 text-muted">Institute</p>
-                              <p class="mb-0">School of London, England</p>
+                            <div class="col-md-4">
+                              <p class="mb-1 text-muted">Estado</p>
+                              <p class="mb-0">MS</p>
                             </div>
                           </div>
                         </li>
                       </ul>
                     </div>
                   </div>
+                  
                 </div>
               </div>
             </div>
@@ -382,61 +183,60 @@
                 <div class="col-lg-6">
                   <div class="card">
                     <div class="card-header">
-                      <h5>Personal Information</h5>
+                      <h5>Informações Pessoais</h5>
                     </div>
                     <div class="card-body">
                       <div class="row">
                         <div class="col-sm-12 text-center mb-3">
                           <div class="user-upload wid-75">
-                            <img src="../assets/images/user/avatar-4.jpg" alt="img" class="img-fluid">
+                            <img src="../assets/images/user/avatar-5.jpg" alt="img" class="img-fluid">
                             <label for="uplfile" class="img-avtar-upload">
                               <i class="ti ti-camera f-24 mb-1"></i>
-                              <span>Upload</span>
+                              <span>Enviar</span>
                             </label>
                             <input type="file" id="uplfile" class="d-none">
                           </div>
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group">
-                            <label class="form-label">First Name</label>
-                            <input type="text" class="form-control" value="Anshan">
+                            <label class="form-label">Nome Completo</label>
+                            <input type="text" class="form-control" value="Gabriel Camargo">
                           </div>
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group">
-                            <label class="form-label">Last Name</label>
-                            <input type="text" class="form-control" value="Handgun">
+                            <label class="form-label">CEP</label>
+                            <input type="text" class="form-control" value="79304-072">
                           </div>
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group">
-                            <label class="form-label">Country</label>
-                            <input type="text" class="form-control" value="New York">
+                            <label class="form-label">Endereço</label>
+                            <input type="text" class="form-control" value="Alameda São Bento">
                           </div>
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group">
-                            <label class="form-label">Zip code</label>
-                            <input type="text" class="form-control" value="956754">
+                            <label class="form-label">Bairro</label>
+                            <input type="text" class="form-control" value="Universitário">
                           </div>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-2">
                           <div class="form-group">
-                            <label class="form-label">Bio</label>
-                            <textarea
-                              class="form-control">Hello, I’m Anshan Handgun Creative Graphic Designer & User Experience Designer based in Website, I create digital Products a more Beautiful and usable place. Morbid accusant ipsum. Nam nec tellus at.</textarea>
+                            <label class="form-label">Número</label>
+                            <input type="text" class="form-control" value="56">
                           </div>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-6">
                           <div class="form-group">
-                            <label class="form-label">Experience</label>
-                            <select class="form-control">
-                              <option>Startup</option>
-                              <option>2 year</option>
-                              <option>3 year</option>
-                              <option selected>4 year</option>
-                              <option>5 year</option>
-                            </select>
+                            <label class="form-label">Cidade</label>
+                            <input type="text" class="form-control" value="Corumbá">
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label class="form-label">Estado</label>
+                            <input type="text" class="form-control" value="MS">
                           </div>
                         </div>
                       </div>
@@ -446,90 +246,45 @@
                 <div class="col-lg-6">
                   <div class="card">
                     <div class="card-header">
-                      <h5>Social Network</h5>
+                      <h5>Conexão Externa</h5>
                     </div>
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-2">
                         <div class="flex-grow-1 me-3">
                           <div class="d-flex align-items-center">
                             <div class="flex-shrink-0">
-                              <div class="avtar avtar-xs btn-light-twitter">
-                                <i class="fab fa-twitter f-16"></i>
+                              <div class="avtar avtar-xs btn-light-googleplus">
+                                <i class="fab fa-google f-16"></i>
+                                
                               </div>
                             </div>
                             <div class="flex-grow-1 ms-3">
-                              <h6 class="mb-0">Twitter</h6>
+                              <h6 class="mb-0">Google</h6>
                             </div>
                           </div>
                         </div>
                         <div class="flex-shrink-0">
-                          <button class="btn btn-link-primary">Connect</button>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center mb-2">
-                        <div class="flex-grow-1 me-3">
-                          <div class="d-flex align-items-center">
-                            <div class="flex-shrink-0">
-                              <div class="avtar avtar-xs btn-light-facebook">
-                                <i class="fab fa-facebook-f f-16"></i>
-                              </div>
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                              <h6 class="mb-0">Facebook <small class="text-muted f-w-400">/Anshan Handgun</small></h6>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="flex-shrink-0">
-                          <button class="btn btn-link-danger">Remove</button>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <div class="flex-grow-1 me-3">
-                          <div class="d-flex align-items-center">
-                            <div class="flex-shrink-0">
-                              <div class="avtar avtar-xs btn-light-linkedin">
-                                <i class="fab fa-linkedin-in f-16"></i>
-                              </div>
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                              <h6 class="mb-0">Linkedin</h6>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="flex-shrink-0">
-                          <button class="btn btn-link-primary">Connect</button>
+                          <button class="btn btn-link-primary">Conectar</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header">
-                      <h5>Contact Information</h5>
+                      <h5>Informações de Contato</h5>
                     </div>
                     <div class="card-body">
                       <div class="row">
                         <div class="col-sm-6">
                           <div class="form-group">
-                            <label class="form-label">Contact Phone</label>
-                            <input type="text" class="form-control" value="(+99) 9999 999 999">
+                            <label class="form-label">Telefone</label>
+                            <input type="text" class="form-control" value="+55 35 98436-8617">
                           </div>
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group">
                             <label class="form-label">Email <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" value="demo@sample.com">
-                          </div>
-                        </div>
-                        <div class="col-sm-12">
-                          <div class="form-group">
-                            <label class="form-label">Portfolio Url</label>
-                            <input type="text" class="form-control" value="https://demo.com">
-                          </div>
-                        </div>
-                        <div class="col-sm-12">
-                          <div class="form-group">
-                            <label class="form-label">Address</label>
-                            <textarea class="form-control">3379  Monroe Avenue, Fort Myers, Florida(33912)</textarea>
+                            <input type="text" class="form-control" value="contato@abcbbr.org">
                           </div>
                         </div>
                       </div>
@@ -537,86 +292,25 @@
                   </div>
                 </div>
                 <div class="col-12 text-end btn-page">
-                  <div class="btn btn-outline-secondary">Cancel</div>
-                  <div class="btn btn-primary">Update Profile</div>
+                  <div class="btn btn-outline-secondary">Cancelar</div>
+                  <div class="btn btn-primary">Atualizar Perfil</div>
                 </div>
               </div>
             </div>
             <div class="tab-pane" id="profile-3" role="tabpanel" aria-labelledby="profile-tab-3">
               <div class="row">
-                <div class="col-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5>General Settings</h5>
-                    </div>
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <div class="form-group">
-                            <label class="form-label">Username <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" value="Ashoka_Tano_16">
-                            <small class="form-text text-muted">Your Profile URL:
-                              https://pc.com/Ashoka_Tano_16</small>
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="form-group">
-                            <label class="form-label">Account Email <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" value="demo@sample.com">
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="form-group">
-                            <label class="form-label">Language</label>
-                            <select class="form-control">
-                              <option>Washington</option>
-                              <option>India</option>
-                              <option>Africa</option>
-                              <option>New York</option>
-                              <option>Malaysia</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="form-group">
-                            <label class="form-label">Sign in Using</label>
-                            <select class="form-control">
-                              <option>Password</option>
-                              <option>Face Recognition</option>
-                              <option>Thumb Impression</option>
-                              <option>Key</option>
-                              <option>Pin</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div class="col-lg-6">
                   <div class="card">
                     <div class="card-header">
-                      <h5>Advance Settings</h5>
+                      <h5>Configurações Avançadas</h5>
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
-                        <li class="list-group-item px-0 pt-0">
-                          <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                              <p class="mb-1">Secure Browsing</p>
-                              <p class="text-muted text-sm mb-0">Browsing Securely ( https ) when it's necessary</p>
-                            </div>
-                            <div class="form-check form-switch p-0">
-                              <input class="form-check-input h4 position-relative m-0" type="checkbox" role="switch"
-                                checked="">
-                            </div>
-                          </div>
-                        </li>
                         <li class="list-group-item px-0">
                           <div class="d-flex align-items-center justify-content-between">
                             <div>
-                              <p class="mb-1">Login Notifications</p>
-                              <p class="text-muted text-sm mb-0">Notify when login attempted from other place</p>
+                              <p class="mb-1">Notificações de Login</p>
+                              <p class="text-muted text-sm mb-0">Notificar quando houver tentativas de login de outro lugar</p>
                             </div>
                             <div class="form-check form-switch p-0">
                               <input class="form-check-input h4 position-relative m-0" type="checkbox" role="switch"
@@ -627,9 +321,8 @@
                         <li class="list-group-item px-0 pb-0">
                           <div class="d-flex align-items-center justify-content-between">
                             <div>
-                              <p class="mb-1">Login Approvals</p>
-                              <p class="text-muted text-sm mb-0">Approvals is not required when login from
-                                unrecognized devices.</p>
+                              <p class="mb-1">Aprovações de Login</p>
+                              <p class="text-muted text-sm mb-0">As aprovações são necessárias ao fazer login em dispositivos não reconhecidos.</p>
                             </div>
                             <div class="form-check form-switch p-0">
                               <input class="form-check-input h4 position-relative m-0" type="checkbox" role="switch"
@@ -644,20 +337,20 @@
                 <div class="col-lg-6">
                   <div class="card">
                     <div class="card-header">
-                      <h5>Recognized Devices</h5>
+                      <h5>Dispositivos reconhecidos</h5>
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item px-0 pt-0">
                           <div class="d-flex align-items-center justify-content-between">
                             <div class="me-2">
-                              <p class="mb-2">Celt Desktop</p>
-                              <p class="mb-0 text-muted">4351 Deans Lane</p>
+                              <p class="mb-2">Desktop Windows</p>
+                              <p class="mb-0 text-muted">Rua Comerciante José Augusto Trindade, 53</p>
                             </div>
                             <div class="">
                               <div class="text-success d-inline-block me-2">
                                 <i class="fas fa-circle f-10 me-2"></i>
-                                Current Active
+                                Atual Ativo
                               </div>
                               <a href="#!" class="text-danger"><i class="feather icon-x-circle"></i></a>
                             </div>
@@ -666,28 +359,13 @@
                         <li class="list-group-item px-0">
                           <div class="d-flex align-items-center justify-content-between">
                             <div class="me-2">
-                              <p class="mb-2">Imco Tablet</p>
-                              <p class="mb-0 text-muted">4185 Michigan Avenue</p>
+                              <p class="mb-2">Android Moto G8</p>
+                              <p class="mb-0 text-muted">Chácara 35 Quadra G</p>
                             </div>
                             <div class="">
                               <div class="text-muted d-inline-block me-2">
                                 <i class="fas fa-circle f-10 me-2"></i>
-                                Active 5 days ago
-                              </div>
-                              <a href="#!" class="text-danger"><i class="feather icon-x-circle"></i></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item px-0 pb-0">
-                          <div class="d-flex align-items-center justify-content-between">
-                            <div class="me-2">
-                              <p class="mb-2">Albs Mobile</p>
-                              <p class="mb-0 text-muted">3462 Fairfax Drive</p>
-                            </div>
-                            <div class="">
-                              <div class="text-muted d-inline-block me-2">
-                                <i class="fas fa-circle f-10 me-2"></i>
-                                Active 1 month ago
+                                Ativo há 5 dias
                               </div>
                               <a href="#!" class="text-danger"><i class="feather icon-x-circle"></i></a>
                             </div>
@@ -700,26 +378,17 @@
                 <div class="col-12">
                   <div class="card">
                     <div class="card-header">
-                      <h5>Active Sessions</h5>
+                      <h5>Sessões Ativas</h5>
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item px-0 pt-0">
                           <div class="d-flex align-items-center justify-content-between">
                             <div class="me-2">
-                              <p class="mb-2">Celt Desktop</p>
-                              <p class="mb-0 text-muted">4351 Deans Lane</p>
+                              <p class="mb-2">Desktop Windows</p>
+                              <p class="mb-0 text-muted">Rua Comerciante José Augusto Trindade, 53</p>
                             </div>
-                            <button class="btn btn-link-danger">Logout</button>
-                          </div>
-                        </li>
-                        <li class="list-group-item px-0 pb-0">
-                          <div class="d-flex align-items-center justify-content-between">
-                            <div class="me-2">
-                              <p class="mb-2">Moon Tablet</p>
-                              <p class="mb-0 text-muted">4185 Michigan Avenue</p>
-                            </div>
-                            <button class="btn btn-link-danger">Logout</button>
+                            <button class="btn btn-link-danger">Desativar</button>
                           </div>
                         </li>
                       </ul>
@@ -727,303 +396,79 @@
                   </div>
                 </div>
                 <div class="col-12 text-end">
-                  <button class="btn btn-outline-dark ms-2">Clear</button>
-                  <button class="btn btn-primary">Update Profile</button>
+                  <button class="btn btn-outline-dark ms-2">Cancelar</button>
+                  <button class="btn btn-primary">Atualizar Perfil</button>
                 </div>
               </div>
             </div>
             <div class="tab-pane" id="profile-4" role="tabpanel" aria-labelledby="profile-tab-4">
               <div class="card">
                 <div class="card-header">
-                  <h5>Change Password</h5>
+                  <h5>Alterar Senha</h5>
                 </div>
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label class="form-label">Old Password</label>
+                        <label class="form-label">Senha Antiga</label>
                         <input type="password" class="form-control">
                       </div>
                       <div class="form-group">
-                        <label class="form-label">New Password</label>
+                        <label class="form-label">Nova Senha</label>
                         <input type="password" class="form-control">
                       </div>
                       <div class="form-group">
-                        <label class="form-label">Confirm Password</label>
+                        <label class="form-label">Confirme a Senha</label>
                         <input type="password" class="form-control">
                       </div>
                     </div>
                     <div class="col-sm-6">
-                      <h5>New password must contain:</h5>
+                      <h5>A nova senha deve conter:</h5>
                       <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><i class="ti ti-circle-check text-success f-16 me-2"></i> At least 8
-                          characters</li>
-                        <li class="list-group-item"><i class="ti ti-circle-check text-success f-16 me-2"></i> At least 1
-                          lower letter (a-z)</li>
-                        <li class="list-group-item"><i class="ti ti-circle-check text-success f-16 me-2"></i> At least 1
-                          uppercase letter(A-Z)</li>
-                        <li class="list-group-item"><i class="ti ti-circle-check text-success f-16 me-2"></i> At least 1
-                          number (0-9)</li>
-                        <li class="list-group-item"><i class="ti ti-circle-check text-success f-16 me-2"></i> At least 1
-                          special characters</li>
+                        <li class="list-group-item"><i class="ti ti-circle-check text-success f-16 me-2"></i> Pelo menos 8 caracteres</li>
+                        <li class="list-group-item"><i class="ti ti-circle-check text-success f-16 me-2"></i> Pelo menos 1 letra minúscula (a-z)</li>
+                        <li class="list-group-item"><i class="ti ti-circle-check text-success f-16 me-2"></i> Pelo menos 1 letra maiúscula (A-Z)</li>
+                        <li class="list-group-item"><i class="ti ti-circle-check text-success f-16 me-2"></i> Pelo menos 1 número (0-9)</li>
+                        <li class="list-group-item"><i class="ti ti-circle-check text-success f-16 me-2"></i> Pelo menos 1 caractere especial</li>
                       </ul>
                     </div>
                   </div>
                 </div>
                 <div class="card-footer text-end btn-page">
-                  <div class="btn btn-outline-secondary">Cancel</div>
-                  <div class="btn btn-primary">Update Profile</div>
+                  <div class="btn btn-outline-secondary">Cancelar</div>
+                  <div class="btn btn-primary">Atualizar Perfil</div>
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="profile-5" role="tabpanel" aria-labelledby="profile-tab-5">
-              <div class="card">
-                <div class="card-header">
-                  <h5>Invite Team Members</h5>
-                </div>
-                <div class="card-body">
-                  <h4>5/10 <small>members available in your plan.</small></h4>
-                  <hr class="my-3">
-                  <div class="row">
-                    <div class="col-md-8">
-                      <div class="form-group">
-                        <label class="form-label">Email Address</label>
-                        <div class="row">
-                          <div class="col">
-                            <input type="email" class="form-control">
-                          </div>
-                          <div class="col-auto">
-                            <button class="btn btn-primary">Send</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body table-card">
-                  <div class="table-responsive">
-                    <table class="table mb-0">
-                      <thead>
-                        <tr>
-                          <th>MEMBER</th>
-                          <th>ROLE</th>
-                          <th class="text-end">STATUS</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <div class="row">
-                              <div class="col-auto pe-0">
-                                <img src="../assets/images/user/avatar-1.jpg" alt="user-image"
-                                  class="wid-40 rounded-circle">
-                              </div>
-                              <div class="col">
-                                <h5 class="mb-0">Addie Bass</h5>
-                                <p class="text-muted f-12 mb-0">mareva@gmail.com</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td><span class="badge bg-primary">Owner</span></td>
-                          <td class="text-end"><span class="badge bg-success">Joined</span></td>
-                          <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
-                                class="ti ti-dots f-18"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="row">
-                              <div class="col-auto pe-0">
-                                <img src="../assets/images/user/avatar-4.jpg" alt="user-image"
-                                  class="wid-40 rounded-circle">
-                              </div>
-                              <div class="col">
-                                <h5 class="mb-0">Agnes McGee</h5>
-                                <p class="text-muted f-12 mb-0">heba@gmail.com</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td><span class="badge bg-light-info">Manager</span></td>
-                          <td class="text-end"><a href="#" class="btn btn-link-danger">Resend</a> <span
-                              class="badge bg-light-success">Invited</span></td>
-                          <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
-                                class="ti ti-dots f-18"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="row">
-                              <div class="col-auto pe-0">
-                                <img src="../assets/images/user/avatar-5.jpg" alt="user-image"
-                                  class="wid-40 rounded-circle">
-                              </div>
-                              <div class="col">
-                                <h5 class="mb-0">Agnes McGee</h5>
-                                <p class="text-muted f-12 mb-0">heba@gmail.com</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td><span class="badge bg-light-warning">Staff</span></td>
-                          <td class="text-end"><span class="badge bg-success">Joined</span></td>
-                          <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
-                                class="ti ti-dots f-18"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="row">
-                              <div class="col-auto pe-0">
-                                <img src="../assets/images/user/avatar-1.jpg" alt="user-image"
-                                  class="wid-40 rounded-circle">
-                              </div>
-                              <div class="col">
-                                <h5 class="mb-0">Addie Bass</h5>
-                                <p class="text-muted f-12 mb-0">mareva@gmail.com</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td><span class="badge bg-primary">Owner</span></td>
-                          <td class="text-end"><span class="badge bg-success">Joined</span></td>
-                          <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
-                                class="ti ti-dots f-18"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="row">
-                              <div class="col-auto pe-0">
-                                <img src="../assets/images/user/avatar-4.jpg" alt="user-image"
-                                  class="wid-40 rounded-circle">
-                              </div>
-                              <div class="col">
-                                <h5 class="mb-0">Agnes McGee</h5>
-                                <p class="text-muted f-12 mb-0">heba@gmail.com</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td><span class="badge bg-light-info">Manager</span></td>
-                          <td class="text-end"><a href="#" class="btn btn-link-danger">Resend</a> <span
-                              class="badge bg-light-success">Invited</span></td>
-                          <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
-                                class="ti ti-dots f-18"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="row">
-                              <div class="col-auto pe-0">
-                                <img src="../assets/images/user/avatar-5.jpg" alt="user-image"
-                                  class="wid-40 rounded-circle">
-                              </div>
-                              <div class="col">
-                                <h5 class="mb-0">Agnes McGee</h5>
-                                <p class="text-muted f-12 mb-0">heba@gmail.com</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td><span class="badge bg-light-warning">Staff</span></td>
-                          <td class="text-end"><span class="badge bg-success">Joined</span></td>
-                          <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
-                                class="ti ti-dots f-18"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="row">
-                              <div class="col-auto pe-0">
-                                <img src="../assets/images/user/avatar-1.jpg" alt="user-image"
-                                  class="wid-40 rounded-circle">
-                              </div>
-                              <div class="col">
-                                <h5 class="mb-0">Addie Bass</h5>
-                                <p class="text-muted f-12 mb-0">mareva@gmail.com</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td><span class="badge bg-primary">Owner</span></td>
-                          <td class="text-end"><span class="badge bg-success">Joined</span></td>
-                          <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
-                                class="ti ti-dots f-18"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="row">
-                              <div class="col-auto pe-0">
-                                <img src="../assets/images/user/avatar-4.jpg" alt="user-image"
-                                  class="wid-40 rounded-circle">
-                              </div>
-                              <div class="col">
-                                <h5 class="mb-0">Agnes McGee</h5>
-                                <p class="text-muted f-12 mb-0">heba@gmail.com</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td><span class="badge bg-light-info">Manager</span></td>
-                          <td class="text-end"><a href="#" class="btn btn-link-danger">Resend</a> <span
-                              class="badge bg-light-success">Invited</span></td>
-                          <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
-                                class="ti ti-dots f-18"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="row">
-                              <div class="col-auto pe-0">
-                                <img src="../assets/images/user/avatar-5.jpg" alt="user-image"
-                                  class="wid-40 rounded-circle">
-                              </div>
-                              <div class="col">
-                                <h5 class="mb-0">Agnes McGee</h5>
-                                <p class="text-muted f-12 mb-0">heba@gmail.com</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td><span class="badge bg-light-warning">Staff</span></td>
-                          <td class="text-end"><span class="badge bg-success">Joined</span></td>
-                          <td class="text-end"><a href="#" class="avtar avtar-s btn-link-secondary"><i
-                                class="ti ti-dots f-18"></i></a></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div class="card-footer text-end btn-page">
-                  <div class="btn btn-link-danger">Cancel</div>
-                  <div class="btn btn-primary">Update Profile</div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane" id="profile-6" role="tabpanel" aria-labelledby="profile-tab-6">
+            <div class="tab-pane" id="profile-5" role="tabpanel" aria-labelledby="profile-tab-6">
               <div class="row">
                 <div class="col-md-6">
                   <div class="card">
                     <div class="card-header">
-                      <h5>Email Settings</h5>
+                      <h5>Configurações de E-mail</h5>
                     </div>
                     <div class="card-body">
-                      <h6 class="mb-4">Setup Email Notification</h6>
+                      <h6 class="mb-4">Configurar Notificação por Email</h6>
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <div>
-                          <p class="text-muted mb-0">Email Notification</p>
+                          <p class="text-muted mb-0">Enviar Notificações por Email</p>
                         </div>
                         <div class="form-check form-switch p-0">
                           <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch"
                             checked="">
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between mb-1">
-                        <div>
-                          <p class="text-muted mb-0">Send Copy To Personal Email</p>
-                        </div>
-                        <div class="form-check form-switch p-0">
-                          <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch">
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header">
-                      <h5>Updates from System Notification</h5>
+                      <h5>Notificação de Atualizações do Sistema</h5>
                     </div>
                     <div class="card-body">
-                      <h6 class="mb-4">Email you with?</h6>
+                      <h6 class="mb-4">Email para você com?</h6>
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <div>
-                          <p class="text-muted mb-0">News about PCT-themes products and feature updates</p>
+                          <p class="text-muted mb-0">Notícias sobre produtos e atualizações de recursos</p>
                         </div>
                         <div class="form-check p-0">
                           <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch"
@@ -1032,7 +477,7 @@
                       </div>
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <div>
-                          <p class="text-muted mb-0">Tips on getting more out of PCT-themes</p>
+                          <p class="text-muted mb-0">Dicas para aproveitar melhor o sistema</p>
                         </div>
                         <div class="form-check p-0">
                           <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch"
@@ -1041,7 +486,7 @@
                       </div>
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <div>
-                          <p class="text-muted mb-0">Things you missed since you last logged into PCT-themes</p>
+                          <p class="text-muted mb-0">Coisas que você perdeu desde a última vez que fez login</p>
                         </div>
                         <div class="form-check  p-0">
                           <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch">
@@ -1049,7 +494,7 @@
                       </div>
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <div>
-                          <p class="text-muted mb-0">News about products and other services</p>
+                          <p class="text-muted mb-0">Notícias sobre produtos e outros serviços</p>
                         </div>
                         <div class="form-check p-0">
                           <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch">
@@ -1057,7 +502,7 @@
                       </div>
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <div>
-                          <p class="text-muted mb-0">Tips and Document business products</p>
+                          <p class="text-muted mb-0">Dicas e documentos de produtos comerciais</p>
                         </div>
                         <div class="form-check p-0">
                           <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch">
@@ -1069,13 +514,13 @@
                 <div class="col-md-6">
                   <div class="card">
                     <div class="card-header">
-                      <h5>Activity Related Emails</h5>
+                      <h5>Emails Relacionados a Atividades</h5>
                     </div>
                     <div class="card-body">
-                      <h6 class="mb-4">When to email?</h6>
+                      <h6 class="mb-4">Quando enviar e-mail?</h6>
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <div>
-                          <p class="text-muted mb-0">Have new notifications</p>
+                          <p class="text-muted mb-0">Tem novas notificações</p>
                         </div>
                         <div class="form-check form-switch p-0">
                           <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch"
@@ -1084,26 +529,17 @@
                       </div>
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <div>
-                          <p class="text-muted mb-0">You're sent a direct message</p>
+                          <p class="text-muted mb-0">Você recebeu uma mensagem direta</p>
                         </div>
                         <div class="form-check form-switch p-0">
                           <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch">
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between mb-1">
-                        <div>
-                          <p class="text-muted mb-0">Someone adds you as a connection</p>
-                        </div>
-                        <div class="form-check form-switch p-0">
-                          <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch"
-                            checked="">
                         </div>
                       </div>
                       <hr class="my-4 border border-secondary-subtle">
-                      <h6 class="mb-4">When to escalate emails?</h6>
+                      <h6 class="mb-4">Quando escalar e-mails?</h6>
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <div>
-                          <p class="text-muted mb-0">Upon new order</p>
+                          <p class="text-muted mb-0">Após novo pedido</p>
                         </div>
                         <div class="form-check form-switch p-0">
                           <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch"
@@ -1112,7 +548,7 @@
                       </div>
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <div>
-                          <p class="text-muted mb-0">New membership approval</p>
+                          <p class="text-muted mb-0">Aprovação de nova adesão</p>
                         </div>
                         <div class="form-check form-switch p-0">
                           <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch">
@@ -1120,7 +556,7 @@
                       </div>
                       <div class="d-flex align-items-center justify-content-between mb-1">
                         <div>
-                          <p class="text-muted mb-0">Member registration</p>
+                          <p class="text-muted mb-0">Registro de membro</p>
                         </div>
                         <div class="form-check form-switch p-0">
                           <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch"
@@ -1131,8 +567,161 @@
                   </div>
                 </div>
                 <div class="col-12 text-end btn-page">
-                  <div class="btn btn-outline-secondary">Cancel</div>
-                  <div class="btn btn-primary">Update Profile</div>
+                  <div class="btn btn-outline-secondary">Cancelar</div>
+                  <div class="btn btn-primary">Atualizar Perfil</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="profile-6" role="tabpanel" aria-labelledby="profile-tab-7">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>Configurações de Desenvolvedor</h5>
+                    </div>
+                    <div class="card-body">
+                      <h6 class="mb-4">Configurar Chaves de API</h6>
+                      <div class="d-flex align-items-center justify-content-between mb-1">
+                        <div>
+                          <p class="text-muted mb-0">Habilitar uso para Leitura</p>
+                        </div>
+                        <div class="form-check form-switch p-0">
+                          <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch"
+                            checked="">
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between mb-1">
+                        <div>
+                          <p class="text-muted mb-0">Habilitar uso para Registro</p>
+                        </div>
+                        <div class="form-check form-switch p-0">
+                          <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch">
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between mb-1">
+                        <div>
+                          <p class="text-muted mb-0">Habilitar uso para Aprovação</p>
+                        </div>
+                        <div class="form-check form-switch p-0">
+                          <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch">
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between mb-1">
+                        <div>
+                          <p class="text-muted mb-0">Restringir o acesso apenas a IPs de confiança (recomendado)</p>
+                        </div>
+                        <div class="form-check form-switch p-0">
+                          <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch"
+                           checked="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>Sessões das Requisições</h5>
+                    </div>
+                    <div class="card-body">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item px-0 pt-0">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="me-2">
+                              <p class="mb-2">209.31.116.11</p>
+                              <p class="mb-0 text-muted">Estados Unidos</p>
+                            </div>
+                            <div class="">
+                              <div class="text-success d-inline-block me-2">
+                                <i class="fas fa-circle f-10 me-2"></i>
+                                Atual Ativo
+                              </div>
+                              <a href="#!" class="text-danger"><i class="feather icon-x-circle"></i></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="me-2">
+                              <p class="mb-2">a53c:ece6:3aa7:9afe:cbd5:7f66:47de:13db</p>
+                              <p class="mb-0 text-muted">Suíça</p>
+                            </div>
+                            <div class="">
+                              <div class="text-muted d-inline-block me-2">
+                                <i class="fas fa-circle f-10 me-2"></i>
+                                Ativo há 5 dias
+                              </div>
+                              <a href="#!" class="text-danger"><i class="feather icon-x-circle"></i></a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>Configurar IPs de Confiança</h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="form-group">
+                            <label class="form-label">Endereços IPs <span class="text-danger">*</span></label>
+                            <input
+                                class="form-control"
+                                id="choices-text-ip-button"
+                                type="text"
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>Suas Chaves de API</h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="d-flex align-items-center mb-2">
+                        <div class="flex-grow-1 me-3">
+                          <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                              <div class="avtar avtar-xs btn-light-amazon">
+                                <i class="fas fa-key f-16"></i>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                              <span class="badge bg-primary">API Key</span>
+                              <h6 class="mb-0">93e5b7a86c2f4d1e9b10f4c9e2a3d8f02b5f7e8a1c</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <div class="flex-grow-1 me-3">
+                          <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                              <div class="avtar avtar-xs btn-light-amazon">
+                                <i class="fas fa-user-secret f-16"></i>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                              <span class="badge bg-primary">API Secret</span>
+                              <h6 class="mb-0">********</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                          <button class="btn btn-link-primary">Gerar Nova</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 text-end btn-page">
+                  <div class="btn btn-outline-secondary">Cancelar</div>
+                  <div class="btn btn-primary">Atualizar Perfil</div>
                 </div>
               </div>
             </div>
@@ -1141,12 +730,10 @@
         <!-- [ sample-page ] end -->
       </div>
       <!-- [ Main Content ] end -->
+      </div>
     </div>
-  </div>
-  <!-- [ Main Content ] end -->
-  @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
-  @@include('../layouts/customizer.html')
-</body>
-<!-- [Body] end -->
-
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html') @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
 </html>

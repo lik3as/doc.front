@@ -5,6 +5,7 @@
 .dropbox-card {
   overflow: hidden;
   position: relative;
+
   &::after {
     content: '';
     background-image: url('../images/widget/img-dropbox-bg.svg');
@@ -19,18 +20,22 @@
     background-size: 100%;
     background-repeat: no-repeat;
   }
-  > * {
+
+  >* {
     position: relative;
     z-index: 5;
   }
+
   .avtar {
     background: rgba(255, 255, 255, 0.3);
     color: #fff;
   }
 }
+
 .available-balance-card {
   overflow: hidden;
   position: relative;
+
   &::after {
     content: '';
     background: linear-gradient(245deg, transparent 25.46%, rgba(0, 0, 0, 0.2) 68.77%, rgba(0, 0, 0, 0.3) 81.72%);
@@ -42,17 +47,21 @@
     z-index: 1;
     opacity: 0.6;
   }
-  > * {
+
+  >* {
     position: relative;
     z-index: 5;
   }
+
   .avtar {
     background: rgba(0, 0, 0, 0.1);
     color: #fff;
   }
 }
+
 .analytics-tab {
   border-bottom: 0;
+
   .nav-item {
     margin-bottom: -0px;
 
@@ -64,6 +73,7 @@
       color: var(--bs-body-color);
       display: inline-flex;
       align-items: center;
+
       &:after {
         content: '';
         background: var(--bs-primary);
@@ -89,20 +99,24 @@
     border-color: transparent;
     color: var(--bs-primary);
     background: transparent;
+
     &:after {
       left: 0;
       right: 0;
     }
   }
 }
+
 .overview-product-legends {
   border: 1px solid var(--bs-border-color);
   padding: 16px;
   border-radius: var(--bs-border-radius);
+
   p {
     position: relative;
     display: inline-flex;
     align-items: center;
+
     &::after {
       content: '';
       position: absolute;
@@ -115,11 +129,13 @@
       background: currentColor;
       margin-left: -10px;
     }
+
     span {
       color: var(--bs-body-color);
     }
   }
 }
+
 .able-user-group {
   .avtar {
     width: 30px;
@@ -134,15 +150,17 @@
   padding-top: 0;
 
   .table {
-    > thead > tr > th {
+    >thead>tr>th {
       border-top: 0;
     }
 
     tr {
+
       td,
       th {
         &:first-child {
           padding-left: 25px;
+
           @include media-breakpoint-down(sm) {
             padding-left: 20px;
           }
@@ -150,6 +168,7 @@
 
         &:last-child {
           padding-right: 25px;
+
           @include media-breakpoint-down(sm) {
             padding-right: 20px;
           }
@@ -180,6 +199,7 @@
     opacity: 0.4;
     transition: all ease-in 0.3s;
   }
+
   &:hover i {
     opacity: 1;
     transform: scale(1.1);
@@ -274,7 +294,7 @@
       margin: 0 20px;
     }
 
-    > [class*='col-'] {
+    >[class*='col-'] {
       display: table-cell;
       float: none;
       table-layout: fixed;
@@ -284,7 +304,49 @@
         display: flex;
         align-items: center;
       }
+    }
+  }
+}
 
+.welcome-banner {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    background-image: url('../images/widget/img-dropbox-bg.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.5;
+    background-position: bottom right;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  >* {
+    position: relative;
+    z-index: 5;
+  }
+
+  .img-welcome-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+    padding-right: 64px;
+
+    @media (max-width: 768px) {
+      padding-right: 24px;
+    }
+
+    img {
+      width: 200px;
     }
   }
 }

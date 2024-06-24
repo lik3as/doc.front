@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <!-- [Head] start -->
 
   <head>
@@ -15,10 +15,10 @@
         <div class="auth-form">
           <div class="auth-header row">
             <div class="col my-1">
-              <a href="#"><img src="../assets/images/logo-dark.svg" alt="img" /></a>
+              <a href="#"><img src="../assets/images/logo-dark.svg" alt="img" width="150px"/></a>
             </div>
             <div class="col-auto my-1">
-              <h5 class="m-0 text-muted f-w-500">Step <b class="h5" id="auth-active-slide">1</b> to 5</h5>
+              <h5 class="m-0 text-muted f-w-500">Passo <b class="h5" id="auth-active-slide">1</b> de <span id="len-steps">3</span></h5>
             </div>
           </div>
           <div class="card my-5">
@@ -70,7 +70,7 @@
                     data-bs-toggle="tab"
                     href="#auth-4"
                     role="tab"
-                    data-slide-index="4"
+                    data-slide-index="3"
                     aria-controls="auth-4"
                     aria-selected="true"
                   >
@@ -83,8 +83,34 @@
                     data-bs-toggle="tab"
                     href="#auth-5"
                     role="tab"
-                    data-slide-index="5"
+                    data-slide-index="4"
                     aria-controls="auth-5"
+                    aria-selected="true"
+                  >
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="auth-tab-6"
+                    data-bs-toggle="tab"
+                    href="#auth-6"
+                    role="tab"
+                    data-slide-index="5"
+                    aria-controls="auth-6"
+                    aria-selected="true"
+                  >
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="auth-tab-7"
+                    data-bs-toggle="tab"
+                    href="#auth-7"
+                    role="tab"
+                    data-slide-index="6"
+                    aria-controls="auth-7"
                     aria-selected="true"
                   >
                   </a>
@@ -93,142 +119,196 @@
               <div class="tab-content">
                 <div class="tab-pane show active" id="auth-1" role="tabpanel" aria-labelledby="auth-tab-1">
                   <div class="text-center">
-                    <h3 class="text-center mb-3">Welcome to the Able Pro</h3>
-                    <p class="mb-4">Sign up or login with your work email.</p>
+                    <h3 class="text-center mb-3">Bem-vindo ao IDFACE</h3>
+                    <p class="mb-4">Cadastre-se ou faça login com seu e-mail comercial.</p>
                     <div class="d-grid my-3">
                       <button type="button" class="btn mt-2 btn-light-primary bg-light text-muted" onClick="change_tab('#auth-2')">
-                        <img src="../assets/images/authentication/sms.svg" alt="img" /> <span> Continue with work email</span>
+                        <img src="../assets/images/authentication/sms.svg" alt="img" /> <span> Continuar com e-mail comercial</span>
                       </button>
                       <button type="button" class="btn mt-2 btn-light-primary bg-light text-muted">
-                        <img src="../assets/images/authentication/facebook.svg" alt="img" /> <span> Sign In with Facebook</span>
-                      </button>
-                      <button type="button" class="btn mt-2 btn-light-primary bg-light text-muted">
-                        <img src="../assets/images/authentication/twitter.svg" alt="img" /> <span> Sign In with Twitter</span>
-                      </button>
-                      <button type="button" class="btn mt-2 btn-light-primary bg-light text-muted">
-                        <img src="../assets/images/authentication/google.svg" alt="img" /> <span> Sign In with Google</span>
+                        <img src="../assets/images/authentication/google.svg" alt="img" /> <span> Faça login no Google</span>
                       </button>
                     </div>
                   </div>
                 </div>
                 <div class="tab-pane" id="auth-2" role="tabpanel" aria-labelledby="auth-tab-2">
                   <div class="text-center">
-                    <h3 class="text-center mb-3">Welcome to the Able Pro</h3>
-                    <p class="mb-4">Sign up or login with your work email.</p>
+                    <h3 class="text-center mb-3">Bem-vindo ao IDFACE</h3>
+                    <p class="mb-4">Cadastre-se ou faça login com seu e-mail comercial.</p>
                   </div>
                   <div class="form-group">
-                    <label class="form-label">Enter your work email to continue</label>
-                    <input type="email" class="form-control" placeholder="Email" />
+                    <label class="form-label">Digite seu e-mail comercial para continuar <span class="badge bg-light-dark">/ Email</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="Email" />
                   </div>
                   <div class="row g-3">
                     <div class="col-sm-6">
                       <div class="d-grid">
-                        <button class="btn btn-outline-secondary" onClick="change_tab('#auth-1')">Back</button>
+                        <button class="btn btn-outline-secondary" onClick="change_tab('#auth-1')">Voltar</button>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="d-grid">
-                        <button class="btn btn-primary" onClick="change_tab('#auth-3')">Continue</button>
+                        <button class="btn btn-primary auth-email">Continuar</button>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="tab-pane" id="auth-3" role="tabpanel" aria-labelledby="auth-tab-3">
                   <div class="text-center">
-                    <h3 class="text-center mb-3">What’s your purpose for use Able</h3>
-                    <p class="mb-4">Your setup experience will be streamlined accordingly</p>
+                    <h3 class="text-center mb-3">Olá, Gabriel</h3>
+                    <p class="mb-4">Informe a sua senha para continuar.</p>
                   </div>
-                  <div class="row mb-4">
-                    <div class="col-sm-6">
-                      <div class="auth-option">
-                        <input type="radio" class="btn-check" name="options" id="option1" checked />
-                        <label class="auth-megaoption" for="option1">
-                          <svg class="pc-icon">
-                            <use xlink:href="#custom-user"></use>
-                          </svg>
-                          <span class="h5">Personal</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="auth-option">
-                        <input type="radio" class="btn-check" name="options" id="option2" />
-                        <label class="auth-megaoption" for="option2">
-                          <svg class="pc-icon">
-                            <use xlink:href="#custom-home"></use>
-                          </svg>
-                          <span class="h5">Business</span>
-                        </label>
-                      </div>
-                    </div>
+                  <div class="form-group">
+                    <label class="form-label">Senha <span class="badge bg-light-dark">/ Password</span></label>
+                    <input type="password" class="form-control" id="password" placeholder="Senha" />
                   </div>
                   <div class="row g-3">
                     <div class="col-sm-6">
                       <div class="d-grid">
-                        <button class="btn btn-outline-secondary" onClick="change_tab('#auth-2')">Back</button>
+                        <button class="btn btn-outline-secondary" onClick="change_tab('#auth-2')">Voltar</button>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="d-grid">
-                        <button class="btn btn-primary" onClick="change_tab('#auth-4')">Continue</button>
+                        <button class="btn btn-primary">Continuar</button>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="tab-pane" id="auth-4" role="tabpanel" aria-labelledby="auth-tab-4">
                   <div class="text-center">
-                    <h3 class="text-center mb-3">Tell us About Yourself</h3>
-                    <p class="mb-4">Tell us a bit about yourself</p>
+                    <h3 class="text-center mb-3">Qual é a sua finalidade de uso no IDFACE</h3>
+                    <p class="mb-4">Sua experiência de configuração será simplificada de acordo</p>
                   </div>
-                  <div class="row my-4">
+                  <div class="row mb-4">
                     <div class="col-sm-6">
-                      <div class="form-group">
-                        <label class="form-label">First name</label>
-                        <input type="text" class="form-control" placeholder="First name" />
+                      <div class="auth-option">
+                        <input type="radio" class="btn-check" name="options" id="Pessoal" />
+                        <label class="auth-megaoption" for="Pessoal">
+                          <svg class="pc-icon">
+                            <use xlink:href="#custom-user"></use>
+                          </svg>
+                          <span class="h5">Pessoal</span>
+                        </label>
                       </div>
                     </div>
                     <div class="col-sm-6">
-                      <div class="form-group">
-                        <label class="form-label">Last name</label>
-                        <input type="text" class="form-control" placeholder="Last name" />
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <label class="form-label">Email id</label>
-                        <input type="email" class="form-control" placeholder="Email id" />
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control" placeholder="Password" />
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <label class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" placeholder="Confirm Password" />
+                      <div class="auth-option">
+                        <input type="radio" class="btn-check" name="options" id="Empresa" checked />
+                        <label class="auth-megaoption" for="Empresa">
+                          <svg class="pc-icon">
+                            <use xlink:href="#custom-home"></use>
+                          </svg>
+                          <span class="h5">Empresa</span>
+                        </label>
                       </div>
                     </div>
                   </div>
                   <div class="row g-3">
                     <div class="col-sm-6">
                       <div class="d-grid">
-                        <button class="btn btn-outline-secondary" onClick="change_tab('#auth-3')">Back</button>
+                        <button class="btn btn-outline-secondary" onClick="change_tab('#auth-2')">Voltar</button>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="d-grid">
-                        <button class="btn btn-primary" onClick="change_tab('#auth-5')">Continue</button>
+                        <button class="btn btn-primary auth-use">Continuar</button>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="tab-pane" id="auth-5" role="tabpanel" aria-labelledby="auth-tab-5">
                   <div class="text-center">
-                    <h3 class="text-center mb-3">Please confirm your email id</h3>
-                    <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry of Lorem Ipsum.</p>
+                    <h3 class="text-center mb-3">Conte-nos sobre você</h3>
+                    <p class="mb-4">Conte-nos um pouco sobre você</p>
+                  </div>
+                  <div class="row my-4">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label class="form-label">Nome completo</label>
+                        <input type="text" class="form-control" id="name" placeholder="Nome completo" />
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label class="form-label">CPF</label>
+                        <input type="text" class="form-control" id="cpf" placeholder="CPF" />
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label class="form-label">Telefone</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Telefone" />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="password-create" placeholder="Senha" />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label class="form-label">Confirme sua senha</label>
+                        <input type="password" class="form-control" id="password-confirm" placeholder="Confirme sua senha" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="d-grid">
+                        <button class="btn btn-outline-secondary" onClick="change_tab('#auth-4')">Voltar</button>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="d-grid">
+                        <button class="btn btn-primary auth-user">Continuar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="auth-6" role="tabpanel" aria-labelledby="auth-tab-6">
+                  <div class="text-center">
+                    <h3 class="text-center mb-3">Conte-nos sobre sua empresa</h3>
+                    <p class="mb-4">Conte-nos um pouco sobre sua empresa para nos conhecermos melhor</p>
+                  </div>
+                  <div class="row my-4">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label class="form-label">Razão Social</label>
+                        <input type="text" class="form-control" id="reason-social" placeholder="Razão Social" />
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label class="form-label">CNPJ</label>
+                        <input type="text" class="form-control" id="cnpj" placeholder="CNPJ" />
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label class="form-label">Telefone</label>
+                        <input type="text" class="form-control" id="phone-company" placeholder="Telefone" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="d-grid">
+                        <button class="btn btn-outline-secondary" onClick="change_tab('#auth-5')">Voltar</button>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="d-grid">
+                        <button class="btn btn-primary auth-company">Continuar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="auth-7" role="tabpanel" aria-labelledby="auth-tab-7">
+                  <div class="text-center">
+                    <h3 class="text-center mb-3">Por favor, confirme seu endereço de e-mail</h3>
+                    <p class="mb-4">Um código foi enviado para seu e-mail, nos informe para prosseguir com a criação da sua conta.</p>
                   </div>
                   <div class="row my-4 text-center">
                     <div class="col">
@@ -245,7 +325,7 @@
                     </div>
                   </div>
                   <div class="d-grid">
-                    <button class="btn btn-primary auth-conf">Continue</button>
+                    <button class="btn btn-primary auth-conf">Continuar</button>
                   </div>
                 </div>
               </div>
@@ -253,8 +333,8 @@
           </div>
           <div class="auth-footer">
             <p class="m-0 w-100 text-center"
-              >By signing up, you confirm to have read Able pro <a href="#">Privacy Policy</a> and agree to the
-              <a href="#">Terms of Service</a>.</p
+              >Ao se inscrever, você confirma ter lido a <a href="#">Política de Privacidade</a> e concorda com os 
+              <a href="#">Termos de Serviço</a>.</p
             >
           </div>
         </div>
@@ -264,8 +344,8 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-50 rounded-circle mb-3" />
-                  <h5 class="text-white mb-0">Allie Grater</h5>
-                  <p class="text-white text-opacity-50">@alliegrater</p>
+                  <h5 class="text-white mb-0">Aline Medeiros</h5>
+                  <p class="text-white text-opacity-50">@alinemedeiros</p>
                   <div class="star f-20 my-4">
                     <i class="fas fa-star text-warning"></i>
                     <i class="fas fa-star text-warning"></i>
@@ -274,15 +354,15 @@
                     <i class="fas fa-star-half-alt text-warning"></i>
                   </div>
                   <p class="text-white"
-                    >Very good customer service!👌 I liked the design and there was nothing wrong, but found out after testing that it did
-                    not quite match the functionality and overall design that I needed for my type of software. I therefore contacted
-                    customer service and it was no problem even though the deadline for refund had actually expired.😍</p
+                    >Atendimento ao cliente muito bom!👌 Gostei do design e não havia nada de errado, mas descobri depois de testar que sim
+                    não corresponde exatamente à funcionalidade e ao design geral que eu precisava para o meu tipo de software. Por isso entrei em contato
+                    atendimento ao cliente e não houve problema, embora o prazo para reembolso tivesse expirado.😍</p
                   >
                 </div>
                 <div class="carousel-item">
                   <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar wid-50 rounded-circle mb-3" />
-                  <h5 class="text-white mb-0">Allie Grater</h5>
-                  <p class="text-white text-opacity-50">@alliegrater</p>
+                  <h5 class="text-white mb-0">Aline Medeiros</h5>
+                  <p class="text-white text-opacity-50">@alinemedeiros</p>
                   <div class="star f-20 my-4">
                     <i class="fas fa-star text-warning"></i>
                     <i class="fas fa-star text-warning"></i>
@@ -291,15 +371,15 @@
                     <i class="fas fa-star-half-alt text-warning"></i>
                   </div>
                   <p class="text-white"
-                    >Very good customer service!👌 I liked the design and there was nothing wrong, but found out after testing that it did
-                    not quite match the functionality and overall design that I needed for my type of software. I therefore contacted
-                    customer service and it was no problem even though the deadline for refund had actually expired.😍</p
+                    >Atendimento ao cliente muito bom!👌 Gostei do design e não havia nada de errado, mas descobri depois de testar que sim
+                    não corresponde exatamente à funcionalidade e ao design geral que eu precisava para o meu tipo de software. Por isso entrei em contato
+                    atendimento ao cliente e não houve problema, embora o prazo para reembolso tivesse expirado.😍</p
                   >
                 </div>
                 <div class="carousel-item">
                   <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="user-avtar wid-50 rounded-circle mb-3" />
-                  <h5 class="text-white mb-0">Allie Grater</h5>
-                  <p class="text-white text-opacity-50">@alliegrater</p>
+                  <h5 class="text-white mb-0">Aline Medeiros</h5>
+                  <p class="text-white text-opacity-50">@alinemedeiros</p>
                   <div class="star f-20 my-4">
                     <i class="fas fa-star text-warning"></i>
                     <i class="fas fa-star text-warning"></i>
@@ -308,15 +388,15 @@
                     <i class="fas fa-star-half-alt text-warning"></i>
                   </div>
                   <p class="text-white"
-                    >Very good customer service!👌 I liked the design and there was nothing wrong, but found out after testing that it did
-                    not quite match the functionality and overall design that I needed for my type of software. I therefore contacted
-                    customer service and it was no problem even though the deadline for refund had actually expired.😍</p
+                    >Atendimento ao cliente muito bom!👌 Gostei do design e não havia nada de errado, mas descobri depois de testar que sim
+                    não corresponde exatamente à funcionalidade e ao design geral que eu precisava para o meu tipo de software. Por isso entrei em contato
+                    atendimento ao cliente e não houve problema, embora o prazo para reembolso tivesse expirado.😍</p
                   >
                 </div>
                 <div class="carousel-item">
                   <img src="../assets/images/user/avatar-4.jpg" alt="user-image" class="user-avtar wid-50 rounded-circle mb-3" />
-                  <h5 class="text-white mb-0">Allie Grater</h5>
-                  <p class="text-white text-opacity-50">@alliegrater</p>
+                  <h5 class="text-white mb-0">Aline Medeiros</h5>
+                  <p class="text-white text-opacity-50">@alinemedeiros</p>
                   <div class="star f-20 my-4">
                     <i class="fas fa-star text-warning"></i>
                     <i class="fas fa-star text-warning"></i>
@@ -325,15 +405,15 @@
                     <i class="fas fa-star-half-alt text-warning"></i>
                   </div>
                   <p class="text-white"
-                    >Very good customer service!👌 I liked the design and there was nothing wrong, but found out after testing that it did
-                    not quite match the functionality and overall design that I needed for my type of software. I therefore contacted
-                    customer service and it was no problem even though the deadline for refund had actually expired.😍</p
+                    >Atendimento ao cliente muito bom!👌 Gostei do design e não havia nada de errado, mas descobri depois de testar que sim
+                    não corresponde exatamente à funcionalidade e ao design geral que eu precisava para o meu tipo de software. Por isso entrei em contato
+                    atendimento ao cliente e não houve problema, embora o prazo para reembolso tivesse expirado.😍</p
                   >
                 </div>
                 <div class="carousel-item">
                   <img src="../assets/images/user/avatar-5.jpg" alt="user-image" class="user-avtar wid-50 rounded-circle mb-3" />
-                  <h5 class="text-white mb-0">Allie Grater</h5>
-                  <p class="text-white text-opacity-50">@alliegrater</p>
+                  <h5 class="text-white mb-0">Aline Medeiros</h5>
+                  <p class="text-white text-opacity-50">@alinemedeiros</p>
                   <div class="star f-20 my-4">
                     <i class="fas fa-star text-warning"></i>
                     <i class="fas fa-star text-warning"></i>
@@ -342,9 +422,9 @@
                     <i class="fas fa-star-half-alt text-warning"></i>
                   </div>
                   <p class="text-white"
-                    >Very good customer service!👌 I liked the design and there was nothing wrong, but found out after testing that it did
-                    not quite match the functionality and overall design that I needed for my type of software. I therefore contacted
-                    customer service and it was no problem even though the deadline for refund had actually expired.😍</p
+                    >Atendimento ao cliente muito bom!👌 Gostei do design e não havia nada de errado, mas descobri depois de testar que sim
+                    não corresponde exatamente à funcionalidade e ao design geral que eu precisava para o meu tipo de software. Por isso entrei em contato
+                    atendimento ao cliente e não houve problema, embora o prazo para reembolso tivesse expirado.😍</p
                   >
                 </div>
               </div>
@@ -371,21 +451,7 @@
     <!-- [Page Specific JS] start -->
     <!-- Sweet Alert -->
     <script src="../assets/js/plugins/sweetalert2.all.min.js"></script>
-    <script>
-      document.querySelector('.auth-conf').addEventListener('click', function () {
-        Swal.fire({
-          icon: 'success',
-          title: 'Account created successfully'
-        });
-      });
-
-      function change_tab(tab_name) {
-        var someTabTriggerEl = document.querySelector('a[href="' + tab_name + '"]');
-        document.querySelector('#auth-active-slide').innerHTML = someTabTriggerEl.getAttribute('data-slide-index');
-        var actTab = new bootstrap.Tab(someTabTriggerEl);
-        actTab.show();
-      }
-    </script>
+    <script src="../assets/js/auth.js"></script>
     <!-- [Page Specific JS] end -->
     @@include('../layouts/footer-js.html') @@include('../layouts/customizer.html')
   </body>

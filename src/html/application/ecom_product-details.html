@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <!-- [Head] start -->
 
@@ -14,7 +14,7 @@
     <!-- [ Main Content ] start -->
     <div class="pc-container">
       <div class="pc-content">
-        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'E-commerce', 'breadcrumb-item-active': 'Products'})
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'E-commerce', 'breadcrumb-item-active': 'Products Details'})
 
         <!-- [ Main Content ] start -->
         <div class="row">
@@ -179,7 +179,7 @@
                       <li class="mb-2">Dark Blue Regular Women Jeans</li>
                       <li class="mb-2">Fabric : 100% Cotton</li>
                     </ul>
-                    <div class="form-group row">
+                    <div class="mb-3 row">
                       <label class="col-form-label col-lg-3 col-sm-12">Colors <span class="text-danger">*</span></label>
                       <div class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center">
                         <div class="form-check form-check-inline color-checkbox mb-0">
@@ -200,7 +200,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="form-group row align-items-center">
+                    <div class="mb-3 row align-items-center">
                       <label class="col-form-label col-lg-3 col-sm-12">
                         <span class="d-block">Size</span>
                         <a class="link-primary text-sm text-decoration-underline">Size Chart?</a></label
@@ -222,7 +222,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="mb-3 row">
                       <label class="col-form-label col-lg-3 col-sm-12">Quantity <span class="text-danger">*</span></label>
                       <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="btn-group btn-group-sm mb-2 border" role="group">
@@ -353,7 +353,7 @@
                         <h5>Product Category</h5>
                         <hr class="my-3" />
                         <div class="table-responsive">
-                          <table class="table">
+                          <table class="table table-borderless">
                             <tbody>
                               <tr>
                                 <td class="text-muted py-1">Wearable Device Type:</td>
@@ -375,7 +375,7 @@
                         <h5>Manufacturer Details</h5>
                         <hr class="my-3" />
                         <div class="table-responsive">
-                          <table class="table">
+                          <table class="table table-borderless">
                             <tbody>
                               <tr>
                                 <td class="text-muted py-1">Brand :</td>
@@ -491,12 +491,12 @@
                     </div>
                     <div class="card">
                       <div class="card-body">
-                        <div class="media align-items-start">
+                        <div class="d-flex align-items-start">
                           <div class="chat-avtar">
                             <img class="img-radius img-fluid wid-40" src="../assets/images/user/avatar-1.jpg" alt="User image" />
                             <div class="bg-success chat-badge"></div>
                           </div>
-                          <div class="media-body ms-3">
+                          <div class="flex-grow-1 ms-3">
                             <h6 class="mb-1">Harriet Wilson</h6>
                             <p class="text-muted text-sm mb-1">2 hour ago</p>
                             <div class="star">
@@ -516,12 +516,12 @@
                     </div>
                     <div class="card">
                       <div class="card-body">
-                        <div class="media align-items-start">
+                        <div class="d-flex align-items-start">
                           <div class="chat-avtar">
                             <img class="img-radius img-fluid wid-40" src="../assets/images/user/avatar-2.jpg" alt="User image" />
                             <div class="bg-success chat-badge"></div>
                           </div>
-                          <div class="media-body ms-3">
+                          <div class="flex-grow-1 ms-3">
                             <h6 class="mb-1">Lou Olson</h6>
                             <p class="text-muted text-sm mb-1">2 hour ago</p>
                             <div class="star">
@@ -713,19 +713,19 @@
         new SimpleBar(tc[t]);
       }
       // quantity start
-      function increaseValue(temp) {
-        var value = parseInt(document.getElementById(temp).value, 10);
+      function increaseValue(counter) {
+        var value = parseInt(document.getElementById(counter).value, 10);
         value = isNaN(value) ? 0 : value;
         value++;
-        document.getElementById(temp).value = value;
+        document.getElementById(counter).value = value;
       }
 
-      function decreaseValue(temp) {
-        var value = parseInt(document.getElementById(temp).value, 10);
+      function decreaseValue(counter) {
+        var value = parseInt(document.getElementById(counter).value, 10);
         value = isNaN(value) ? 0 : value;
         value < 1 ? (value = 1) : '';
         value--;
-        document.getElementById(temp).value = value;
+        document.getElementById(counter).value = value;
       }
       // quantity end
     </script>

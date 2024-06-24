@@ -233,7 +233,7 @@ setTimeout(function () {
         type: 'area',
         toolbar: {
           show: false
-        },
+        }
       },
       dataLabels: {
         enabled: false
@@ -314,7 +314,7 @@ setTimeout(function () {
         height: 320,
         toolbar: {
           show: false
-        },
+        }
       },
       dataLabels: {
         enabled: false
@@ -943,7 +943,7 @@ setTimeout(function () {
       ],
       xaxis: {
         type: 'datetime'
-      },
+      }
     };
     var chart_mixed_chart_1 = new ApexCharts(document.querySelector('#mixed-chart-1'), options_mixed_chart_1);
     chart_mixed_chart_1.render();
@@ -1302,8 +1302,8 @@ setTimeout(function () {
         }
       ],
       colors: ['#2CA87F', '#DC2626'],
-      fill:{
-        type: "solid"
+      fill: {
+        type: 'solid'
       },
       xaxis: {
         type: 'datetime'
@@ -1654,7 +1654,7 @@ setTimeout(function () {
         }
       },
       legend: {
-        offsetY: 8,
+        offsetY: 8
       },
       xaxis: {
         type: 'datetime'
@@ -1768,7 +1768,7 @@ setTimeout(function () {
             max: 90
           })
         }
-      ],
+      ]
     };
     var chart_heatmap_chart_1 = new ApexCharts(document.querySelector('#heatmap-chart-1'), options_heatmap_chart_1);
     chart_heatmap_chart_1.render();
@@ -1891,7 +1891,7 @@ setTimeout(function () {
       colors: ['#4680FF', '#13c2c2', '#2CA87F', '#E58A00', '#DC2626'],
       xaxis: {
         type: 'category'
-      },
+      }
     };
     var chart_heatmap_chart_2 = new ApexCharts(document.querySelector('#heatmap-chart-2'), options_heatmap_chart_2);
     chart_heatmap_chart_2.render();
@@ -2181,5 +2181,4 @@ setTimeout(function () {
       ]);
     }
   })();
-
 }, 700);

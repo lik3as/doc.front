@@ -13,9 +13,7 @@ function floatchart() {
       plotOptions: { bar: { columnWidth: '80%' } },
       series: [
         {
-          data: [
-            10, 30, 40, 20, 60, 50, 20, 15, 20, 25, 30, 25
-          ]
+          data: [10, 30, 40, 20, 60, 50, 20, 15, 20, 25, 30, 25]
         }
       ],
       xaxis: { crosshairs: { width: 1 } },
@@ -56,9 +54,7 @@ function floatchart() {
       },
       series: [
         {
-          data: [
-            1, 1, 60, 1, 1, 50, 1, 1, 40, 1, 1, 25, 0
-          ]
+          data: [1, 1, 60, 1, 1, 50, 1, 1, 40, 1, 1, 25, 0]
         }
       ],
       tooltip: {
@@ -77,36 +73,46 @@ function floatchart() {
     var chart = new ApexCharts(document.querySelector('#new-users-graph'), options2);
     chart.render();
     var options3 = {
-      series: [{
-        data: [{
-          x: '',
-          y: [1, 6]
-        }, {
-          x: '',
-          y: [3, 7]
-        }, {
-          x: '',
-          y: [4, 8]
-        }, {
-          x: '',
-          y: [5, 9]
-        }, {
-          x: '',
-          y: [4, 8]
-        }, {
-          x: '',
-          y: [4, 7]
-        }, {
-          x: '',
-          y: [2, 5]
-        }]
-      }],
+      series: [
+        {
+          data: [
+            {
+              x: '',
+              y: [1, 6]
+            },
+            {
+              x: '',
+              y: [3, 7]
+            },
+            {
+              x: '',
+              y: [4, 8]
+            },
+            {
+              x: '',
+              y: [5, 9]
+            },
+            {
+              x: '',
+              y: [4, 8]
+            },
+            {
+              x: '',
+              y: [4, 7]
+            },
+            {
+              x: '',
+              y: [2, 5]
+            }
+          ]
+        }
+      ],
       chart: {
         type: 'rangeBar',
         height: 80,
         sparkline: { enabled: true },
         toolbar: {
-          show: false,
+          show: false
         }
       },
       colors: ['#E58A00'],
@@ -120,7 +126,7 @@ function floatchart() {
       yaxis: {
         tickAmount: 2,
         min: 0,
-        max: 10,
+        max: 10
       },
       grid: {
         show: false,
@@ -129,20 +135,20 @@ function floatchart() {
           right: 0,
           bottom: 0,
           left: 0
-        },
+        }
       },
       xaxis: {
         labels: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         }
       },
       dataLabels: {
@@ -155,8 +161,8 @@ function floatchart() {
       chart: {
         height: 250,
         type: 'bar',
-        toolbar:{
-          show: false,
+        toolbar: {
+          show: false
         }
       },
       plotOptions: {
@@ -164,13 +170,13 @@ function floatchart() {
           horizontal: false,
           columnWidth: '55%',
           borderRadius: 4,
-          borderRadiusApplication: 'end',
+          borderRadiusApplication: 'end'
         }
       },
       legend: {
         show: true,
         position: 'top',
-        horizontalAlign: 'left', 
+        horizontalAlign: 'left'
       },
       dataLabels: {
         enabled: false
@@ -183,7 +189,7 @@ function floatchart() {
       },
       fill: {
         colors: ['#4680FF', '#4680FF'],
-        opacity: [1 , 0.5]
+        opacity: [1, 0.5]
       },
       grid: {
         strokeDashArray: 4
@@ -209,16 +215,16 @@ function floatchart() {
         }
       }
     };
-    var chart = new ApexCharts(document.querySelector("#overview-chart-1"), options4);
+    var chart = new ApexCharts(document.querySelector('#overview-chart-1'), options4);
     chart.render();
-    var chart1 = new ApexCharts(document.querySelector("#overview-chart-3"), options4);
+    var chart1 = new ApexCharts(document.querySelector('#overview-chart-3'), options4);
     chart1.render();
     var options5 = {
       chart: {
         height: 250,
         type: 'bar',
-        toolbar:{
-          show: false,
+        toolbar: {
+          show: false
         }
       },
       plotOptions: {
@@ -226,13 +232,13 @@ function floatchart() {
           horizontal: false,
           columnWidth: '55%',
           borderRadius: 4,
-          borderRadiusApplication: 'end',
+          borderRadiusApplication: 'end'
         }
       },
       legend: {
         show: true,
         position: 'top',
-        horizontalAlign: 'left', 
+        horizontalAlign: 'left'
       },
       dataLabels: {
         enabled: false
@@ -245,7 +251,7 @@ function floatchart() {
       },
       fill: {
         colors: ['#4680FF', '#4680FF'],
-        opacity: [1 , 0.5]
+        opacity: [1, 0.5]
       },
       grid: {
         strokeDashArray: 4
@@ -271,9 +277,9 @@ function floatchart() {
         }
       }
     };
-    var chart = new ApexCharts(document.querySelector("#overview-chart-2"), options5);
+    var chart = new ApexCharts(document.querySelector('#overview-chart-2'), options5);
     chart.render();
-    var chart1 = new ApexCharts(document.querySelector("#overview-chart-4"), options5);
+    var chart1 = new ApexCharts(document.querySelector('#overview-chart-4'), options5);
     chart1.render();
     var options6 = {
       chart: { type: 'bar', height: 80, sparkline: { enabled: true } },
@@ -281,9 +287,7 @@ function floatchart() {
       plotOptions: { bar: { columnWidth: '80%' } },
       series: [
         {
-          data: [
-            10, 30, 40, 20, 60, 50, 20, 15, 20, 25, 30, 25
-          ]
+          data: [10, 30, 40, 20, 60, 50, 20, 15, 20, 25, 30, 25]
         }
       ],
       xaxis: { crosshairs: { width: 1 } },
@@ -329,7 +333,7 @@ function floatchart() {
         marker: { show: false }
       }
     };
-    var chart = new ApexCharts(document.querySelector("#languages-graph"), options7);
+    var chart = new ApexCharts(document.querySelector('#languages-graph'), options7);
     chart.render();
     var options8 = {
       chart: {
@@ -339,8 +343,8 @@ function floatchart() {
       labels: ['Components', 'Widgets', 'Pages', 'Forms', 'Other', 'Apps'],
       series: [40, 20, 10, 15, 5, 10],
       colors: ['#4680FF', '#4680FF', '#212529', '#212529', '#212529', '#212529'],
-      fill:{
-        opacity : [1, 0.6, 0.4, 0.6, 0.8, 1]
+      fill: {
+        opacity: [1, 0.6, 0.4, 0.6, 0.8, 1]
       },
       legend: {
         show: false
@@ -356,10 +360,10 @@ function floatchart() {
           breakpoint: 575,
           options: {
             chart: {
-              height: 250,
+              height: 250
             },
             dataLabels: {
-              enabled: false,
+              enabled: false
             }
           }
         }
@@ -371,7 +375,7 @@ function floatchart() {
       series: [30],
       chart: {
         height: 150,
-        type: 'radialBar',
+        type: 'radialBar'
       },
       plotOptions: {
         radialBar: {
@@ -381,17 +385,17 @@ function floatchart() {
             background: 'transparent',
             imageOffsetX: 0,
             imageOffsetY: 0,
-            position: 'front',
+            position: 'front'
           },
           track: {
             background: '#4680FF50',
-            strokeWidth: '50%',
+            strokeWidth: '50%'
           },
 
           dataLabels: {
             show: true,
             name: {
-              show: false,
+              show: false
             },
             value: {
               formatter: function (val) {
@@ -401,26 +405,26 @@ function floatchart() {
               color: '#4680FF',
               fontSize: '20px',
               fontWeight: '700',
-              show: true,
+              show: true
             }
           }
         }
       },
       colors: ['#4680FF'],
       fill: {
-        type: 'solid',
+        type: 'solid'
       },
       stroke: {
         lineCap: 'round'
-      },
+      }
     };
-    var chart = new ApexCharts(document.querySelector("#total-earning-graph-1"), options9);
+    var chart = new ApexCharts(document.querySelector('#total-earning-graph-1'), options9);
     chart.render();
     var options10 = {
       series: [30],
       chart: {
         height: 150,
-        type: 'radialBar',
+        type: 'radialBar'
       },
       plotOptions: {
         radialBar: {
@@ -430,17 +434,17 @@ function floatchart() {
             background: 'transparent',
             imageOffsetX: 0,
             imageOffsetY: 0,
-            position: 'front',
+            position: 'front'
           },
           track: {
             background: '#DC262650',
-            strokeWidth: '50%',
+            strokeWidth: '50%'
           },
 
           dataLabels: {
             show: true,
             name: {
-              show: false,
+              show: false
             },
             value: {
               formatter: function (val) {
@@ -450,20 +454,20 @@ function floatchart() {
               color: '#DC2626',
               fontSize: '20px',
               fontWeight: '700',
-              show: true,
+              show: true
             }
           }
         }
       },
       colors: ['#DC2626'],
       fill: {
-        type: 'solid',
+        type: 'solid'
       },
       stroke: {
         lineCap: 'round'
-      },
+      }
     };
-    var chart = new ApexCharts(document.querySelector("#total-earning-graph-2"), options10);
+    var chart = new ApexCharts(document.querySelector('#total-earning-graph-2'), options10);
     chart.render();
   })();
 }

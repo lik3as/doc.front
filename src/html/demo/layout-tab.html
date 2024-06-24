@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <!-- [Head] start -->
   <head>
-    @@include('../layouts/head-page-meta.html', {'title': 'Compact Layout'}) @@include('../layouts/head-css.html')
+    @@include('../layouts/head-page-meta.html', {'title': 'Tab Layout'}) @@include('../layouts/head-css.html')
   </head>
   <!-- [Head] end -->
   <!-- [Body] Start -->
   <body @@bodySetup data-pc-direction="ltr">
-    @@include('../layouts/layout-tab.html')
+    @@include('../layouts/layout-vertical.html')
 
     <!-- [ Main Content ] start -->
     <div class="pc-container">
@@ -39,7 +39,9 @@
     </div>
     <!-- [ Main Content ] end -->
     @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html') @@include('../layouts/customizer.html')
-    <script src="../assets/js/layout-tab.js"></script>
+    <script>
+      localStorage.setItem('layout', 'tab');
+    </script>
   </body>
   <!-- [Body] end -->
 </html>

@@ -3,7 +3,6 @@
 ==========================  **/
 
 .fc {
-
   td,
   th {
     border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
@@ -17,7 +16,6 @@
     }
 
     @media (max-width: 767.98px) {
-
       .fc-left,
       .fc-right,
       .fc-center {
@@ -28,7 +26,7 @@
         margin: 10px 0;
       }
 
-      >*>* {
+      > * > * {
         float: none;
       }
 
@@ -111,12 +109,12 @@
     width: 100% !important;
   }
 
-  .fc-scrollgrid-section>* {
+  .fc-scrollgrid-section > * {
     border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
     border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
   }
 
-  .fc-scrollgrid-section-liquid>td {
+  .fc-scrollgrid-section-liquid > td {
     border-top: 0;
   }
 
@@ -128,7 +126,7 @@
 .fc-theme-bootstrap a:not([href]) {
   color: var(--bs-body-color);
 }
-.fc-theme-standard .fc-scrollgrid{
+.fc-theme-standard .fc-scrollgrid {
   border: none;
 }
 .fc-event {
@@ -185,7 +183,7 @@
 
 .fc-prev-button,
 .fc-next-button {
-  &.fc-button{
+  &.fc-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -221,7 +219,7 @@
   }
 
   .fc-button-primary {
-    background-color: rgba(var(--bs-primary-rgb), .1) !important;
+    background-color: rgba(var(--bs-primary-rgb), 0.1) !important;
     color: var(--bs-primary);
     border: var(--bs-primary);
     padding: 9px 16px;
@@ -237,7 +235,6 @@
     }
 
     &:not(:disabled) {
-
       &.fc-button-active,
       &:active {
         background-color: var(--bs-primary) !important;
@@ -345,7 +342,6 @@
 }
 
 .fc-daygrid-event-harness .fc-daygrid-event.bg-soft-dark {
-
   .fc-event-main,
   .fc-event-title {
     color: var(--bs-dark) !important;

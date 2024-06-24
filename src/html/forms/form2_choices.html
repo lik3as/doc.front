@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <!-- [Head] start -->
   <head>
@@ -24,7 +24,7 @@
               </div>
               <div class="card-body">
                 <form>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Limited to 5 values with remove button</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <input
@@ -33,10 +33,10 @@
                         type="text"
                         value="preset-1,preset-2"
                         placeholder="Enter something"
-                     >
+                      />
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Unique values only, no pasting</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <input
@@ -45,16 +45,16 @@
                         type="text"
                         value="preset-1, preset-2"
                         placeholder="This is a placeholder"
-                     >
+                      />
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Email addresses only</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
-                      <input class="form-control" id="choices-text-email-filter" type="text" placeholder="This is a placeholder">
+                      <input class="form-control" id="choices-text-email-filter" type="text" placeholder="This is a placeholder" />
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Disabled</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <input
@@ -63,10 +63,10 @@
                         type="text"
                         value="josh@joshuajohnson.co.uk, joe@bloggs.co.uk"
                         placeholder="This is a placeholder"
-                     >
+                      />
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end"
                       >Prepends and appends a value to each items return value</label
                     >
@@ -77,10 +77,10 @@
                         type="text"
                         value="preset-1, preset-2"
                         placeholder="This is a placeholder"
-                     >
+                      />
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Preset values passed through options</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <input
@@ -89,19 +89,19 @@
                         type="text"
                         value="Michael Smith"
                         placeholder="This is a placeholder"
-                     >
+                      />
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">I18N labels</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
-                      <input class="form-control" id="choices-text-i18n" type="text">
+                      <input class="form-control" id="choices-text-i18n" type="text" />
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Right-to-left</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
-                      <input data-trigger class="form-control" id="choices-text-rtl" type="text" value="Value 1, Value 2" dir="rtl">
+                      <input data-trigger class="form-control" id="choices-text-rtl" type="text" value="Value 1, Value 2" dir="rtl" />
                     </div>
                   </div>
                 </form>
@@ -113,16 +113,10 @@
               </div>
               <div class="card-body">
                 <form>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Default</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
-                      <select
-                        class="form-control"
-                        data-trigger
-                        name="choices-multiple-default"
-                        id="choices-multiple-default"
-                        multiple
-                      >
+                      <select class="form-control" data-trigger name="choices-multiple-default" id="choices-multiple-default" multiple>
                         <option value="Choice 1" selected>Choice 1</option>
                         <option value="Choice 2">Choice 2</option>
                         <option value="Choice 3">Choice 3</option>
@@ -130,15 +124,10 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">With remove button</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
-                      <select
-                        class="form-control"
-                        name="choices-multiple-remove-button"
-                        id="choices-multiple-remove-button"
-                        multiple
-                      >
+                      <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" multiple>
                         <option value="Choice 1" selected>Choice 1</option>
                         <option value="Choice 2">Choice 2</option>
                         <option value="Choice 3">Choice 3</option>
@@ -146,15 +135,10 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Option groups</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
-                      <select
-                        class="form-control"
-                        name="choices-multiple-groups"
-                        id="choices-multiple-groups"
-                        multiple
-                      >
+                      <select class="form-control" name="choices-multiple-groups" id="choices-multiple-groups" multiple>
                         <option value="">Choose a city</option>
                         <optgroup label="UK">
                           <option value="London">London</option>
@@ -189,7 +173,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end"
                       >Options from remote source (Fetch API) &amp; limited to 5</label
                     >
@@ -200,22 +184,13 @@
                         id="choices-multiple-remote-fetch"
                         multiple
                       ></select>
-                      <small
-                        >If the following example do not load, the  rate limit has probably been reached. Try again later!</small
-                      >
+                      <small>If the following example do not load, the rate limit has probably been reached. Try again later!</small>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Right-to-left</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
-                      <select
-                        class="form-control"
-                        data-trigger
-                        name="choices-multiple-rtl"
-                        id="choices-multiple-rtl"
-                        multiple
-                        dir="rtl"
-                      >
+                      <select class="form-control" data-trigger name="choices-multiple-rtl" id="choices-multiple-rtl" multiple dir="rtl">
                         <option value="Choice 1" selected>Choice 1</option>
                         <option value="Choice 2">Choice 2</option>
                         <option value="Choice 3">Choice 3</option>
@@ -223,7 +198,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Use label in event (add/remove)</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select id="choices-multiple-labels" multiple></select>
@@ -239,15 +214,10 @@
               </div>
               <div class="card-body">
                 <form>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Default</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
-                      <select
-                        class="form-control"
-                        data-trigger
-                        name="choices-single-default"
-                        id="choices-single-default"
-                      >
+                      <select class="form-control" data-trigger name="choices-single-default" id="choices-single-default">
                         <option value="">This is a placeholder</option>
                         <option value="Choice 1">Choice 1</option>
                         <option value="Choice 2">Choice 2</option>
@@ -255,19 +225,16 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Options from remote source (Fetch API)</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" name="choices-single-remote-fetch" id="choices-single-remote-fetch">
                         <option value="">Pick an Arctic Monkeys' record</option>
                       </select>
-                      <small
-                        >If the following two examples do not load, the  rate limit has probably been reached. Try again
-                        later!</small
-                      >
+                      <small>If the following two examples do not load, the rate limit has probably been reached. Try again later!</small>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end"
                       >Options from remote source (Fetch API) &amp; remove button</label
                     >
@@ -275,13 +242,10 @@
                       <select class="form-control" name="choices-single-remove-xhr" id="choices-single-remove-xhr">
                         <option value="">Pick a Smiths' record</option>
                       </select>
-                      <small
-                        >If the following two examples do not load, the  rate limit has probably been reached. Try again
-                        later!</small
-                      >
+                      <small>If the following two examples do not load, the rate limit has probably been reached. Try again later!</small>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Option groups</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" data-trigger name="choices-single-groups" id="choices-single-groups">
@@ -319,7 +283,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Right-to-left</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" data-trigger name="choices-single-rtl" id="choices-single-rtl" dir="rtl">
@@ -329,7 +293,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Options added via config with no search</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" name="choices-single-no-search" id="choices-single-no-search">
@@ -337,20 +301,20 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Option and option groups added via config</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" name="choices-single-preset-options" id="choices-single-preset-options"></select>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Option selected via config with custom properties</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" name="choices-single-selected-option" id="choices-single-selected-option"></select>
                       <small>Try searching for 'fantastic', "Label 3" should display</small>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end"
                       >Option searchable by custom properties via <code>data-custom-properties</code> attribute</label
                     >
@@ -363,7 +327,7 @@
                       <small>Try searching for 'fantastic', "Label 3" should display</small>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Options without sorting</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" name="choices-single-no-sorting" id="choices-single-no-sorting">
@@ -388,7 +352,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Custom templates</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" name="choices-single-custom-templates" id="choices-single-custom-templates">
@@ -399,7 +363,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Cities</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" name="cities" id="cities">
@@ -416,7 +380,7 @@
                       </small>
                     </div>
                   </div>
-                  <div class="form-group row mb-0">
+                  <div class="row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Tube stations</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" name="tube-stations" id="tube-stations">
@@ -439,7 +403,7 @@
               </div>
               <div class="card-body">
                 <form>
-                  <div class="form-group row">
+                  <div class="mb-3 row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">Change me!</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" name="reset-simple" id="reset-simple">
@@ -451,7 +415,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row mb-0">
+                  <div class="row mb-3">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end">And me!</label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <select class="form-control" name="reset-multiple" id="reset-multiple" multiple>
@@ -462,7 +426,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="form-group row mb-0">
+                  <div class="row">
                     <label class="col-form-label col-lg-4 col-sm-12 text-lg-end"></label>
                     <div class="col-lg-6 col-md-11 col-sm-12">
                       <button class="btn btn-light-warning" type="reset"><i class="me-2" data-feather="alert-triangle"></i> Reset</button>

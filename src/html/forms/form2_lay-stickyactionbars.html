@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <!-- [Head] start -->
   <head>
@@ -34,11 +34,11 @@
               </div>
               <div class="card-body">
                 <h5>Form controls</h5>
-                <hr>
+                <hr />
                 <div class="row">
                   <div class="col-md-6">
                     <form>
-                      <div class="form-group">
+                      <div class="mb-3">
                         <label class="form-label" for="exampleInputEmail1">Email address</label>
                         <input
                           type="email"
@@ -46,15 +46,15 @@
                           id="exampleInputEmail1"
                           aria-describedby="emailHelp"
                           placeholder="Enter email"
-                       >
+                        />
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                       </div>
-                      <div class="form-group">
+                      <div class="mb-3">
                         <label class="form-label" for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
                       </div>
-                      <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
                         <label for="exampleCheck1">Check me out</label>
                       </div>
                       <button type="submit" class="btn btn-primary mb-4">Submit</button>
@@ -62,11 +62,11 @@
                   </div>
                   <div class="col-md-6">
                     <form>
-                      <div class="form-group">
+                      <div class="mb-3">
                         <label class="form-label">Text</label>
-                        <input type="text" class="form-control" placeholder="Text">
+                        <input type="text" class="form-control" placeholder="Text" />
                       </div>
-                      <div class="form-group">
+                      <div class="mb-3">
                         <label class="form-label" for="exampleFormControlTextarea1">Example textarea</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                       </div>
@@ -74,12 +74,12 @@
                   </div>
                 </div>
                 <h5>Sizing</h5>
-                <hr>
+                <hr />
                 <div class="row">
                   <div class="col-md-6">
-                    <input class="mb-3 form-control form-control-lg" type="text" placeholder=".form-control-lg">
-                    <input class="mb-3 form-control" type="text" placeholder="Default input">
-                    <input class="mb-3 form-control form-control-sm" type="text" placeholder=".form-control-sm">
+                    <input class="mb-3 form-control form-control-lg" type="text" placeholder=".form-control-lg" />
+                    <input class="mb-3 form-control" type="text" placeholder="Default input" />
+                    <input class="mb-3 form-control form-control-sm" type="text" placeholder=".form-control-sm" />
                   </div>
                   <div class="col-md-6">
                     <select class="mb-3 form-select form-select-lg">
@@ -91,17 +91,17 @@
                   </div>
                 </div>
                 <h5>Inline</h5>
-                <hr>
+                <hr />
                 <form class="row row-cols-md-auto g-3 align-items-center">
                   <div class="col-12">
                     <label class="sr-only" for="inlineFormInputName">Name</label>
-                    <input type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe">
+                    <input type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe" />
                   </div>
                   <div class="col-12">
                     <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
                     <div class="input-group">
                       <div class="input-group-text">@</div>
-                      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+                      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username" />
                     </div>
                   </div>
                   <div class="col-12">
@@ -115,7 +115,7 @@
                   </div>
                   <div class="col-12">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                      <input class="form-check-input" type="checkbox" id="inlineFormCheck" />
                       <label class="form-check-label" for="inlineFormCheck"> Remember me </label>
                     </div>
                   </div>
@@ -123,47 +123,47 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </form>
-                <h5>Form Grid</h5>
-                <hr>
+                <h5 class="mt-4">Form Grid</h5>
+                <hr />
                 <form>
                   <div class="row">
-                    <div class="form-group col-md-6">
+                    <div class="mb-3 col-md-6">
                       <label class="form-label" for="inputEmail4">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="mb-3 col-md-6">
                       <label class="form-label" for="inputPassword4">Password</label>
-                      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                      <input type="password" class="form-control" id="inputPassword4" placeholder="Password" />
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="mb-3">
                     <label class="form-label" for="inputAddress">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
                   </div>
-                  <div class="form-group">
+                  <div class="mb-3">
                     <label class="form-label" for="inputAddress2">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
                   </div>
                   <div class="row">
-                    <div class="form-group col-md-6">
+                    <div class="mb-3 col-md-6">
                       <label class="form-label" for="inputCity">City</label>
-                      <input type="text" class="form-control" id="inputCity">
+                      <input type="text" class="form-control" id="inputCity" />
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="mb-3 col-md-4">
                       <label class="form-label" for="inputState">State</label>
                       <select id="inputState" class="form-select">
                         <option selected>select</option>
                         <option>Large select</option>
                       </select>
                     </div>
-                    <div class="form-group col-md-2">
+                    <div class="mb-3 col-md-2">
                       <label class="form-label" for="inputZip">Zip</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="text" class="form-control" id="inputZip" />
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="mb-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <input class="form-check-input" type="checkbox" id="gridCheck" />
                       <label class="form-check-label" for="gridCheck">Check me out</label>
                     </div>
                   </div>

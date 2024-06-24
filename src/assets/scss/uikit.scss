@@ -8,11 +8,11 @@ File: style.css
 =================================================================================== */
 
 // main framework
-@import "settings/color-variables";
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
-@import "settings/bootstrap-variables";
-@import "settings/theme-variables";
+@import 'settings/color-variables';
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'settings/bootstrap-variables';
+@import 'settings/theme-variables';
 
 :root {
   --pc-header-background: rgba(var(--bs-white-rgb), 0.7);
@@ -43,7 +43,6 @@ section {
     }
   }
 }
-
 
 .navbar {
   position: fixed;
@@ -206,7 +205,6 @@ section {
       }
     }
   }
-
 }
 
 @media (max-width: 991.98px) {
@@ -284,7 +282,7 @@ section {
   position: relative;
   border-top: 1px solid var(--bs-border-color);
 
-  >pre {
+  > pre {
     overflow: hidden;
     width: 100%;
     margin-bottom: 0;
@@ -313,7 +311,7 @@ section {
       }
     }
 
-    >code {
+    > code {
       padding: 0;
       background: none;
       font-size: 16px;
@@ -351,7 +349,7 @@ section {
   right: 75px;
 
   &.copied::before {
-    content: "Copied!.";
+    content: 'Copied!.';
     position: absolute;
     display: block;
     right: 100%;

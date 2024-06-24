@@ -8,12 +8,12 @@
       border-radius: 2px;
     }
   }
-  .modal-dialog{
-    @include media-breakpoint-down(sm) { 
+  .modal-dialog {
+    @include media-breakpoint-down(sm) {
       margin: var(--bs-modal-margin) 24px;
     }
   }
-  .modal-content{
+  .modal-content {
     border-radius: 2px;
     border: none;
   }

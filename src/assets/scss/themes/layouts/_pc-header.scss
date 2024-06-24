@@ -32,8 +32,25 @@
     display: flex;
     padding: 0 25px;
     flex-grow: 1;
-    @include media-breakpoint-down(sm) { 
+
+    @include media-breakpoint-down(sm) {
       padding: 0 15px;
+    }
+  }
+
+  .form-search {
+    i {
+      top: 5px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .form-control {
+      width: 198px;
+      padding: 0.65rem 0.75rem 0.65rem 40px;
     }
   }
 
@@ -251,7 +268,7 @@
       display: flex;
       padding: 10px 20px;
 
-      + .cart-item {
+      +.cart-item {
         border-top: 1px dashed $border-color;
       }
 
@@ -329,10 +346,12 @@
   .dropdown-user-profile {
     min-width: 352px;
     max-width: 100%;
+
     .dropdown-header,
     .dropdown-body {
       padding: 16px 20px;
     }
+
     .dropdown-item {
       padding: 10px 15px;
       display: flex;
@@ -340,6 +359,7 @@
       align-items: center;
       justify-content: space-between;
       border: var(--bs-border-width) var(--bs-border-style) transparent;
+
       &:hover,
       &:focus {
         color: var(--bs-dropdown-link-color);
@@ -357,6 +377,7 @@
         }
       }
     }
+
     @media (max-width: 575.98px) {
       min-width: calc(100% - 30px);
     }
@@ -365,10 +386,12 @@
   .dropdown-notification {
     min-width: 450px;
     max-width: 100%;
+
     .dropdown-header,
     .dropdown-body {
       padding: 16px 20px;
     }
+
     .list-group-item-action {
 
       &:active,
@@ -420,27 +443,34 @@
     }
   }
 }
+
 .pc-announcement-offcanvas {
   --bs-offcanvas-width: 474px;
+
   .offcanvas-body {
     &::-webkit-scrollbar {
       width: 6px;
       opacity: 0;
+
       &:hover {
         opacity: 1;
       }
     }
+
     &::-webkit-scrollbar-track {
       background: transparent;
     }
+
     &::-webkit-scrollbar-thumb {
       background: darken($body-bg, 05%);
     }
+
     &::-webkit-scrollbar-thumb:hover {
       background: darken($body-bg, 25%);
     }
   }
 }
+
 .drp-upgrade-card {
   background-size: cover;
 
@@ -584,16 +614,6 @@
   .minimenu {
     .pc-header {
       left: 0;
-    }
-  }
-}
-
-#pc-noti-home {
-  >.media {
-    &:hover {
-      margin: -15px;
-      padding: 15px;
-      background: rgba($primary, 0.1);
     }
   }
 }

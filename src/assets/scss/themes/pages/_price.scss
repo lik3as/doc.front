@@ -13,7 +13,7 @@
     }
 
     .nav-link.active,
-    .show>.nav-link {
+    .show > .nav-link {
       color: var(--bs-body-color);
       background-color: var(--bs-card-bg);
       box-shadow: 0px 8px 24px rgba(27, 46, 94, 0.08);
@@ -58,7 +58,7 @@
 
   &.price-popular {
     .price-head {
-      background: rgba(var(--bs-primary-rgb),.1);
+      background: rgba(var(--bs-primary-rgb), 0.1);
       margin-bottom: 16px;
     }
   }
@@ -73,7 +73,7 @@
     opacity: 0.5;
 
     &::before {
-      content: "\ea5e";
+      content: '\ea5e';
       font-family: tabler-icons !important;
       position: absolute;
       left: 0;
@@ -95,9 +95,9 @@
 .price-check {
   overflow: hidden;
   position: relative;
-  .form-check-label{
-    &::after{
-      content: "";
+  .form-check-label {
+    &::after {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -106,16 +106,16 @@
     }
   }
   .form-check-input,
-  .form-check-label .row{
+  .form-check-label .row {
     position: relative;
     z-index: 8;
   }
   .form-check {
     .form-check-input {
-      &:checked{
-        + .form-check-label{
-          &::after{
-            background: rgba(var(--bs-primary-rgb),.1);
+      &:checked {
+        + .form-check-label {
+          &::after {
+            background: rgba(var(--bs-primary-rgb), 0.1);
           }
         }
       }
