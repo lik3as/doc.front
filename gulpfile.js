@@ -14,6 +14,12 @@ var fileinclude = require("gulp-file-include");
 var browsersync = require("browser-sync");
 var htmlmin = require("gulp-htmlmin");
 const { parallel } = require('gulp');
+const replace = require("gulp-replace");
+const { config } = require("dotenv");
+
+config({
+  path: ".env"
+})
 
 // =======================================================
 // ----------- START: Able Pro Theme Configuration -----------
@@ -55,7 +61,7 @@ const layout = {
   pc_rtl_layout: rtl_layout,
   pc_box_container: box_container,
   pc_theme_version: version,
-  bodySetup: 'data-pc-preset="' + preset_theme + '" data-pc-sidebar-caption="' + caption_show + '" data-pc-layout="' + theme_layout + '" data-pc-direction="' + rtltemp + '" data-pc-theme_contrast="'+ contrasttemp +'" data-pc-theme="' + darklayouttemp + '"',
+  bodySetup: 'data-pc-preset="' + preset_theme + '" data-pc-sidebar-caption="' + caption_show + '" data-pc-layout="' + theme_layout + '" data-pc-direction="' + rtltemp + '" data-pc-theme_contrast="' + contrasttemp + '" data-pc-theme="' + darklayouttemp + '"',
 };
 
 // =======================================================
@@ -67,29 +73,28 @@ const path = {
   "src": {
     "html": "src/html/**/*.html",
     "css": "src/assets/scss/*.scss",
-    "layoutjs": "src/assets/js/*.js",
-    "pagesjs": "src/assets/js/pages/*.js",
+    "js": "src/assets/js/**/*.js",
     "images": "src/assets/images/**/*.{jpg,png}"
   },
   "destination": {
     "html": "dist",
     "css": "dist/assets/css",
-    "layoutjs": "dist/assets/js",
-    "pagesjs": "dist/assets/js/pages",
+    "js": "dist/assets/js",
     "images": "dist/assets/images",
   }
 }
 
 //  [ common ] task start
 //  [ browser reload ] start
-gulp.task("browserSync", function () {
+gulp.task("browserSync", function() {
   browsersync.init({
     server: "dist/",
+    port: 8080
   });
 });
 //  [ browser reload ] end
 
-gulp.task("cleandist", function (callback) {
+gulp.task("cleandist", function(callback) {
   del.sync(["dist/*/"]);
   callback();
 });
@@ -99,7 +104,7 @@ gulp.task("cleandist", function (callback) {
 // ----------- START: Development tasks -----------
 // =======================================================
 //  [ scss compiler ] start
-gulp.task("sass", function () {
+gulp.task("sass", function() {
   // main style css
   return gulp
     .src(path.src.css)
@@ -112,7 +117,7 @@ gulp.task("sass", function () {
 //  [ scss compiler ] end
 
 //  [ Copy assets ] start
-gulp.task("build-node-modules", function () {
+gulp.task("build-node-modules", function() {
   var required_libs = {
     js: [
       "node_modules/bootstrap/dist/js/bootstrap.min.js",
@@ -216,7 +221,7 @@ gulp.task("build-node-modules", function () {
       "node_modules/star-rating.js/dist/star-rating.min.css"
     ],
   };
-  npmlodash(required_libs).forEach(function (assets, type) {
+  npmlodash(required_libs).forEach(function(assets, type) {
     if (type == "css") {
       gulp.src(assets).pipe(gulp.dest("dist/assets/css/plugins"));
     } else {
@@ -237,7 +242,7 @@ gulp.task("build-node-modules", function () {
       "node_modules/@ckeditor/ckeditor5-build-decoupled-document/build/ckeditor.js",
     ],
   };
-  npmlodash(required_libs).forEach(function (assets, type) {
+  npmlodash(required_libs).forEach(function(assets, type) {
     if (type == "classic") {
       gulp.src(assets).pipe(gulp.dest("dist/assets/js/plugins/ckeditor/classic"));
     }
@@ -266,7 +271,7 @@ gulp.task("build-node-modules", function () {
 //  [ Copy assets ] end
 
 //  [ build html ] start
-gulp.task("build-html", function () {
+gulp.task("build-html", function() {
   return gulp
     .src(path.src.html)
     .pipe(
@@ -281,22 +286,19 @@ gulp.task("build-html", function () {
 });
 //  [ build html ] end
 
-  //  [ build js ] start
-gulp.task("build-js", function () {
-  var layoutjs = gulp
-    .src(path.src.layoutjs)
-    .pipe(gulp.dest(path.destination.layoutjs));
+//  [ build js ] start
+gulp.task("build-js", function() {
+  let js = gulp.src(path.src.js);
 
-  var pagesjs = gulp
-    .src(path.src.pagesjs)
-    .pipe(gulp.dest(path.destination.pagesjs));
-
-  return merge(layoutjs, pagesjs);
+  for (const key in process.env) {
+    js = js.pipe(replace(`@@${key}`, process.env[key]));
+  }
+  return js.pipe(gulp.dest(path.destination.js));
 });
 //  [ build js ] end
 
 //  [ watch ] start
-gulp.task("watch", function () {
+gulp.task("watch", function() {
   gulp
     .watch("src/assets/scss/**/*.scss", gulp.series("sass"))
     .on("change", browsersync.reload);
@@ -326,7 +328,7 @@ gulp.task(
 // =======================================================
 
 //  [ css minify ] start
-gulp.task("min-css", function () {
+gulp.task("min-css", function() {
   // main style css
   return gulp
     .src(path.src.css)
@@ -338,24 +340,17 @@ gulp.task("min-css", function () {
 //  [ css minify ] end
 
 //  [ min-js ] start
-gulp.task("min-js", function () {
-  var layoutjs = gulp
-    .src(path.src.layoutjs)
-    .pipe(uglify())
-    .pipe(gulp.dest(path.destination.layoutjs));
-
-  var pagesjs = gulp
-    .src(path.src.pagesjs)
+gulp.task("min-js", function() {
+  return gulp
+    .src(path.src.js)
     .pipe(babel())
     .pipe(uglify())
-    .pipe(gulp.dest(path.destination.pagesjs));
-
-  return merge(layoutjs, pagesjs);
+    .pipe(gulp.dest(path.destination.js));
 });
 //  [ min-js ] end
 
 //  [ minify html ] start
-gulp.task("min-html", function () {
+gulp.task("min-html", function() {
   return gulp
     .src(path.src.html)
     .pipe(
@@ -406,7 +401,7 @@ gulp.task('min-image', function() {
 //  [ image optimizer ] end
 
 //  [ watch minify ] start
-gulp.task("watch-minify", function () {
+gulp.task("watch-minify", function() {
   gulp.watch("src/assets/scss/**/*.scss", gulp.series("min-css"));
   gulp.watch("src/assets/js/**/*.js", gulp.series("min-js"));
   gulp.watch("src/html/**/*.html", gulp.series("min-html"));
