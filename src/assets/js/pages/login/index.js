@@ -62,5 +62,5 @@ document.getElementById("login-btn").onclick = async () => {
   Swal.close();
   await mixinShow("success", "Você foi autenticado com sucesso")
 
-  window.location = "/application/file-manager.html";
+  window.location = "/app/documentos.html";
 }
