@@ -1,7 +1,6 @@
 import FileCard from "../../components/file-card.js";
 import FileOffcanvas from "../../components/file-offcanvas.js";
 
-let files = null;
 let fileId = 0;
 
 const token = localStorage.getItem("token");
@@ -48,7 +47,7 @@ async function fetchFiles() {
       ["Authorization", `Bearer ${token}`]
     ]
   });
-  const files = await body.json() || [];
+  const files = (await body.json()) || [];
   return files
 }
 
