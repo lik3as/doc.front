@@ -341,11 +341,17 @@ gulp.task("min-css", function() {
 
 //  [ min-js ] start
 gulp.task("min-js", function() {
-  return gulp
-    .src(path.src.js)
+  let js = gulp.
+    src(path.src.js);
+
+  for (const key in process.env) {
+    js = js.pipe(replace(`@@${key}`, process.env[key]))
+  }
+
+  return js
     .pipe(babel())
     .pipe(uglify())
-    .pipe(gulp.dest(path.destination.js));
+    .pipe(gulp.dest(path.destination.js))
 });
 //  [ min-js ] end
 
