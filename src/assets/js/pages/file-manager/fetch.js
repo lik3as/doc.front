@@ -56,7 +56,7 @@ document.getElementById('search-input').addEventListener('input', async function
   const inputValue = event.target.value;
   if (inputValue.length === 11) {
     const customer = await findCustomer(inputValue);
-    updateFileCards(customer.files);
+    updateFileCards(customer.files || []);
   }
   if (inputValue.length === 0) {
     const files = await fetchFiles();
