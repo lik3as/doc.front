@@ -35,7 +35,7 @@ export default class FileCard {
             </div>
           </div>
           <div class="my-3 text-center">
-            <img src="../assets/images/application/img-file-pdf.svg" alt="img" class="img-fluid" />
+            <img src="/assets/images/application/img-file-pdf.svg" alt="img" class="img-fluid" />
           </div>
           <div class="d-flex align-items-center justify-content-between mt-4">
             <div>

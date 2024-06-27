@@ -25,7 +25,7 @@ export default class FileOffcanvas {
       </div>
       <div class="offcanvas-body">
         <div class="my-3 text-center">
-          <img src="../assets/images/application/img-file-pdf.svg" alt="img" class="img-fluid wid-100" />
+          <img src="/assets/images/application/img-file-pdf.svg" alt="img" class="img-fluid wid-100" />
           <h5 class="mb-1 mt-4">${this.filename}</h5>
           <p class="mb-0 text-muted">${this.createdAt}</p>
         </div>
