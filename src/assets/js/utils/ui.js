@@ -49,5 +49,3 @@ function fireTimeShow(icon, title, time, html = null) {
     clearInterval(timerInterval);
   });
 }
-
-
