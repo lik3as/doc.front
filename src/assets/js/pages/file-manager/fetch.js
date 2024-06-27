@@ -17,7 +17,7 @@ function updateFileCards(files) {
   files.forEach((file, i) => {
     const pathSeg = file.path.split("/");
     const filename = pathSeg[pathSeg.length - 1];
-    const createdAt = file.createdAt;
+    const createdAt = file.created_at;
     const formatedDate = createdAt.split('T')[0];
 
     new FileOffcanvas(filename, file.downloadUrl, createdAt).render(bodyRoot, i);
