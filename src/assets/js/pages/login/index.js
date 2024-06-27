@@ -1,5 +1,5 @@
 import { auth } from "../../api.js";
-import { isEmailValid } from "../../utils.js";
+import { isEmailValid } from "../../utils/validators.js";
 
 const getCredentials = () => {
   const email = document.getElementById("email");
