@@ -34,33 +34,48 @@ document.getElementById("login-btn").onclick = async () => {
   const status = (await res).status;
   Swal.hideLoading();
 
-  if (status == 401) {
-    Swal.update({
-      title: "Credenciais incorretas",
-      icon: "error",
-      showCancelButton: true,
-      cancelButtonText: "Tentar novamente"
-    })
-    return;
-  } else if (status == 400) {
-    Swal.update({
-      title: "Este usuário ainda não foi cadastrado",
-      icon: "warning",
-      showConfirmButton: true,
-      confirmButtonText: "Cadastrar usuário",
-      showCancelButton: true,
-      cancelButtonText: "Tentar novamente"
-    })
-    if ((await swalRes).isConfirmed) {
-      window.location = "/pages/register-v1.html";
+  switch (status) {
+    case 401: {
+      Swal.update({
+        title: "Credenciais incorretas",
+        icon: "error",
+        showCancelButton: true,
+        cancelButtonText: "Tentar novamente"
+      });
+      return;
     }
-    return;
+    case 400: {
+      Swal.update({
+        title: "Este usuário ainda não foi cadastrado",
+        icon: "warning",
+        showConfirmButton: true,
+        confirmButtonText: "Cadastrar usuário",
+        showCancelButton: true,
+        cancelButtonText: "Tentar novamente"
+      })
+      if ((await swalRes).isConfirmed) {
+        window.location = "/pages/register-v1.html";
+      }
+      return;
+
+    }
+    case 500: {
+      Swal.update({
+        title: "Nosso sistema está enfrentando problemas no momento. Tente novamente mais tarde.",
+        icon: "warning",
+        showCancelButton: true,
+        cancelButtonText: "Tentar novamente"
+      })
+      return;
+    }
+    default: {
+      const body = await (await res).json();
+      localStorage.setItem("token", body.token);
+
+      Swal.close();
+      await mixinShow("success", "Você foi autenticado com sucesso")
+
+      window.location = "/app/documentos.html";
+    }
   }
-  const body = await (await res).json();
-  localStorage.setItem("token", body.token);
-
-  Swal.close();
-  await mixinShow("success", "Você foi autenticado com sucesso")
-
-  window.location = "/app/documentos.html";
 }
