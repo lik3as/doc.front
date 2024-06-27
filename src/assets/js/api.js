@@ -90,3 +90,27 @@ export const auth = async (email, password) => {
 
   return res;
 }
+
+export const signUp = async ({
+  email,
+  fullname,
+  password,
+  username,
+  activated
+}) => {
+  const res = await fetch("@@API_URL/users/create", {
+    body: JSON.stringify({
+      email: email,
+      fullname: fullname,
+      password: password,
+      username: username,
+      activated: activated
+    }),
+    method: "POST",
+    headers: [
+      ...defaultHeaders
+    ]
+  });
+ 
+  return res;
+}
