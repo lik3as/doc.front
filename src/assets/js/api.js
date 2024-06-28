@@ -3,7 +3,11 @@ const defaultHeaders = [
 ]
 
 const getToken = () => {
-  return localStorage.getItem("token");
+  const token = localStorage.getItem("token");
+  if (!token) {
+    window.location = "/pages/login-v3.html";
+  }
+  return token;
 }
 
 const getUserByEmail = async (email) => {
@@ -113,4 +117,34 @@ export const signUp = async ({
   });
  
   return res;
+}
+
+export async function findCustomer(cpf) {
+  const res = await fetch("@@API_URL/customers/find", {
+    body: JSON.stringify({
+      cpf: cpf,
+    }),
+    credentials: "include",
+    method: "POST",
+    headers: [
+      ["Content-Type", "application/json; charset=utf-8"],
+      ["Authorization", `Bearer ${getToken()}`]
+    ]
+  });
+  const data = await res.json();
+  return data;
+}
+
+export async function fetchFiles() {
+  const res = await fetch(`@@API_URL/files?lim=3&id=${0}`, {
+    headers: [
+      ["Authorization", `Bearer ${getToken()}`]
+    ]
+  });
+
+  if (res.status == 401) {
+    return null;
+  }
+
+  return await res.json();
 }

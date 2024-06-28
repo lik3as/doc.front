@@ -1,9 +1,6 @@
+import { fetchFiles, findCustomer } from "../../api.js";
 import FileCard from "../../components/file-card.js";
 import FileOffcanvas from "../../components/file-offcanvas.js";
-
-let fileId = 0;
-
-const token = localStorage.getItem("token");
 
 function updateFileCards(files) {
   const root = document.querySelector("#pills-home .row");
@@ -13,6 +10,15 @@ function updateFileCards(files) {
   FileOffcanvas.nodes.forEach((node) => {
     node.remove();
   })
+
+  if (files == undefined) {
+    mixinShow("warning", "Não encontramos arquivos por aqui");
+    return;
+  }
+  if (files == null) {
+    mixinShow("warning", "Você precisa primeiro efetuar login");
+    return;
+  }
 
   files.forEach((file, i) => {
     const pathSeg = file.path.split("/");
@@ -24,33 +30,6 @@ function updateFileCards(files) {
     new FileCard(filename, formatedDate).render(root, i);
   });
 }
-
-async function findCustomer(cpf) {
-  const res = await fetch("@@API_URL/customers/find", {
-    body: JSON.stringify({
-      cpf: cpf,
-    }),
-    credentials: "include",
-    method: "POST",
-    headers: [
-      ["Content-Type", "application/json; charset=utf-8"],
-      ["Authorization", `Bearer ${token}`]
-    ]
-  });
-  const data = await res.json();
-  return data;
-}
-
-async function fetchFiles() {
-  const body = await fetch(`@@API_URL/files?lim=3&id=${fileId}`, {
-    headers: [
-      ["Authorization", `Bearer ${token}`]
-    ]
-  });
-  const files = (await body.json()) || [];
-  return files
-}
-
 
 document.getElementById('search-input').addEventListener('input', async function(event) {
   const inputValue = event.target.value;
